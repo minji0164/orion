@@ -1,10 +1,5 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "Poppins";
-  font-weight: 700;
-  src: url(../fonts/Poppins-Bold.woff) format("woff");
-}
 /* reset */
+
 body,
 div,
 dl,
@@ -56,14 +51,20 @@ q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after {
-  content: "";
-  content: none;
+blockquote {
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
 }
 
-q:before, q:after {
-  content: "";
-  content: none;
+q {
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
 }
 
 input,
@@ -91,13 +92,20 @@ body {
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
-input[type=text], input[type=password], input[type=submit], input[type=search] {
-  -webkit-appearance: none;
-  border-radius: 0;
-}
-input:checked[type=checkbox] {
-  background-color: #666;
-  -webkit-appearance: checkbox;
+
+input {
+  &[type="text"],
+  &[type="password"],
+  &[type="submit"],
+  &[type="search"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  &:checked[type="checkbox"] {
+    background-color: #666;
+    -webkit-appearance: checkbox;
+  }
 }
 
 button {
@@ -105,21 +113,28 @@ button {
   border-radius: 0;
 }
 
-input[type=button], input[type=submit], input[type=reset], input[type=file] {
-  -webkit-appearance: button;
-  border-radius: 0;
-}
-input[type=search]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
+input {
+  &[type="button"],
+  &[type="submit"],
+  &[type="reset"],
+  &[type="file"] {
+    -webkit-appearance: button;
+    border-radius: 0;
+  }
+
+  &[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
 }
 
 /* 기본 폰트 설정 */
 /* mobile */
+
 body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
-  color: #202020;
+  color: $txtDefult;
 }
 
 /* desktop */
@@ -128,13 +143,17 @@ body {
     font-size: 16px;
   }
 }
+
 /* color값은 디자인가이드에 맞게사용 */
+
 a {
   color: #333;
   text-decoration: none;
-}
-a:active, a:hover {
-  text-decoration: none;
+
+  &:active,
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 address,
@@ -152,36 +171,40 @@ hr {
   display: none;
 }
 
-input[type=password] {
+input[type="password"] {
   font-family: "Malgun Gothic";
 }
 
 /* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
 /* skipnavigation */
+
 #u-skip {
   position: relative;
   z-index: 3000;
-}
-#u-skip a {
-  position: absolute;
-  top: -35px;
-  left: 0;
-  right: 0;
-  display: inline-block;
-  padding: 7px 10px 5px;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  text-align: center;
-  opacity: 0;
-}
-#u-skip a:focus {
-  top: 0;
-  opacity: 1;
-  z-index: 1000;
+
+  a {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    padding: 7px 10px 5px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0;
+
+    &:focus {
+      top: 0;
+      opacity: 1;
+      z-index: 1000;
+    }
+  }
 }
 
 /* 이미지 스프라이트 */
+
 .img-g {
   display: inline-block;
   overflow: hidden;
@@ -191,6 +214,7 @@ input[type=password] {
 
 /* 이미지 */
 /* global */
+
 .ir-pm {
   display: block;
   overflow: hidden;
@@ -200,6 +224,7 @@ input[type=password] {
 }
 
 /* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+
 .ir-wa {
   display: block;
   overflow: hidden;
@@ -210,6 +235,7 @@ input[type=password] {
 }
 
 /* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+
 .blind,
 caption,
 legend {
@@ -222,6 +248,7 @@ legend {
 }
 
 /* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+
 .f_l {
   float: left;
 }
@@ -244,56 +271,20 @@ legend {
 }
 
 /* 테이블 초기화 */
+
 .clearfix {
   display: block;
   overflow: visible;
   width: auto;
   clear: both;
   zoom: 1;
-}
-.clearfix:after {
-  display: block;
-  visibility: hidden;
-  height: 0;
-  font-size: 0;
-  clear: both;
-  content: "";
-}
 
-.wrap {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  &:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    content: "";
+  }
 }
-
-#header {
-  position: fixed;
-  width: 100%;
-  height: 60px;
-  z-index: 1000;
-}
-
-#header .inner {
-  display: flex;
-  justify-content: space-between;
-}
-
-#main slide-intro {
-  position: relative;
-  z-index: 1;
-}
-
-.slide-intro swiper-slide {
-  height: 630px;
-}
-.slide-intro a {
-  display: flex;
-  justify-content: center;
-  height: 630px;
-}
-.slide-intro img {
-  height: 100%;
-}
-.slide-intro p {
-  position: absolute;
-}/*# sourceMappingURL=comm.css.map */
