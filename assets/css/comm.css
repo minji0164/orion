@@ -5,14 +5,14 @@
   src: url(../fonts/Poppins-Bold.woff) format("woff");
 }
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-family: "Pretendard";
+  src: url(../fonts/Pretendard-Regular.woff) format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-family: "Pretendard";
+  src: url(../fonts/Pretendard-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -130,7 +130,7 @@ input[type=search]::-webkit-search-cancel-button {
 body {
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  font-family: "pretendard", "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #202020;
 }
 
@@ -290,22 +290,37 @@ legend {
   justify-content: space-between;
 }
 
-#main slide-intro {
+#main .slide-intro {
   position: relative;
-  z-index: 1;
+  z-index: 1000;
+}
+#main .slide-intro img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#main .slide-intro .link-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#main .slide-intro .link-intro .intro-inner {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 168px;
+}
+#main .slide-intro .link-intro .intro-tit {
+  font-size: 40px;
+  font-weight: 700;
+}
+#main .slide-intro .link-intro .intro-txt {
+  font-size: 14px;
+  margin-top: 30px;
 }
 
 .slide-intro swiper-slide {
-  height: 630px;
-}
-.slide-intro a {
-  display: flex;
-  justify-content: center;
-  height: 630px;
-}
-.slide-intro img {
-  height: 100%;
-}
-.slide-intro p {
-  position: absolute;
+  height: 624px;
 }/*# sourceMappingURL=comm.css.map */

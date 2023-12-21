@@ -97,3 +97,9 @@
     border: 1px solid $border-color;
     background-color: $bg-color;
 }
+
+// fonts
+@mixin p-bold {
+    font-size: 40px;
+    font-weight: 700;
+}
