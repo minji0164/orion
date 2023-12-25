@@ -103,3 +103,17 @@
     font-size: 40px;
     font-weight: 700;
 }
+
+@mixin pop-bold {
+    font-family: 'poppins';
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+}
+
+@mixin p-regular {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 10px;
+}

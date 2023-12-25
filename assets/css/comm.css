@@ -290,6 +290,10 @@ legend {
   justify-content: space-between;
 }
 
+#main .inner {
+  padding: 80px 0;
+}
+
 #main .slide-intro {
   position: relative;
   z-index: 1000;
@@ -321,6 +325,32 @@ legend {
   margin-top: 30px;
 }
 
+body {
+  background: url(../../images/2.png) no-repeat 50% 26.6%;
+}
+
+.wrap {
+  opacity: 0.8;
+}
+
 .slide-intro swiper-slide {
   height: 624px;
+}
+
+.inner {
+  margin: 0 20px;
+}
+
+.main-tit {
+  font-family: "poppins";
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.main-tit-sub {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 10px;
 }/*# sourceMappingURL=comm.css.map */

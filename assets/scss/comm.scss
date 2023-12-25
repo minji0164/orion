@@ -29,6 +29,13 @@
 }
 
 #main {
+    .inner {
+        padding: 80px 0;
+    }
+}
+
+
+#main {
     .slide-intro {
         position: relative;
         z-index: 1000;
@@ -63,18 +70,19 @@
 
         }
     }
-    
+
 }
 
 
 // footer
-// body {
-//     background: url(../../images/1.png) no-repeat 50% 0;
-// }
+body {
+    // background: url(../../images/1.png) no-repeat 50% 0;
+    background: url(../../images/2.png) no-repeat 50% 26.6%;
+}
 
-// .wrap {
-//     opacity: 0.8;
-// }
+.wrap {
+    opacity: 0.8;
+}
 
 @import 'main', 'sub1';
 // 우선순위로 먹혀야 하기 때문에 밑으로 들어감

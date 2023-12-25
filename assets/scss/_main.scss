@@ -3,3 +3,15 @@
         height: 624px;
     }
 }
+
+.inner {
+    margin: 0 20px;
+  }  
+
+.main-tit {
+    @include pop-bold;
+}
+
+.main-tit-sub {
+    @include p-regular;
+}
