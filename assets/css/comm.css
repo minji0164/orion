@@ -361,6 +361,7 @@ legend {
 
 .essence-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   flex-direction: row-reverse;
   height: auto;
@@ -375,6 +376,9 @@ legend {
 }
 .essence-list li:nth-child(2), .essence-list li:nth-child(4) {
   transform: translateY(80px);
+}
+.essence-list li:nth-child(5) {
+  transform: translateX(90px);
 }
 .essence-list li a {
   width: 100%;
