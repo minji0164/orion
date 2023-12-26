@@ -6,7 +6,7 @@
 
 .inner {
     margin: 0 20px;
-  }  
+}
 
 .main-tit {
     @include pop-bold;
@@ -14,4 +14,106 @@
 
 .main-tit-sub {
     @include p-regular;
+}
+
+.essence-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    height: auto;
+    width: auto;
+    margin-top: 50px;
+
+    li {
+        display: flex;
+        margin: 7px;
+        height: 176px;
+        width: 176px;
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            transform: translateY(80px);
+        }
+
+        a {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: $gray-100;
+
+            &::before {
+                margin: 0 auto;
+                display: flex;
+                content: '';
+                width: 60px;
+                height: 60px;
+            }
+
+            &:hover {
+                background: $primary;
+                .essence-name {
+                    color: $white;
+                }
+                // .essence-name {
+                //     display: none;
+                // }
+                // .essence-txt {
+                //     color: $white;
+                //     text-align: center;
+                //     font-size: 14px;
+                //     margin: 20px 20px 0;
+                //     display: block;
+                // }
+            }
+        }
+    }
+
+    .essence-txt {
+        display: none;
+
+    }
+    .essence-name {
+        margin-top: 20px;
+        color: $txtDefult;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+.essence-list {
+    .contractor a::before {
+        background-image: url(../../images/icon/e-contractor.png);
+    }
+    .staff a::before {
+        background-image: url(../../images/icon/e-staff.png);
+    }
+    .sha a::before {
+        background-image: url(../../images/icon/e-sha.png);
+    }
+    .customer a::before {
+        background-image: url(../../images/icon/e-customer.png);
+    }
+    .society a::before {
+        background-image: url(../../images/icon/e-society.png);
+    }
+    // hover
+    .contractor a:hover::before {
+        background-image: url(../../images/icon/h-contractor.png);
+    }
+    .staff a:hover::before {
+        background-image: url(../../images/icon/h-staff.png);
+    }
+    .sha a:hover::before {
+        background-image: url(../../images/icon/h-sha.png);
+    }
+    .customer a:hover::before {
+        background-image: url(../../images/icon/h-customer.png);
+    }
+    .society a:hover::before {
+        background-image: url(../../images/icon/h-society.png);
+    }
 }
