@@ -303,6 +303,9 @@ legend {
 #main .sec-perf .inner {
   padding: 70px 0;
 }
+#main .sec-biz .inner {
+  padding: 80px 0 270px 0;
+}
 
 #main .slide-intro {
   position: relative;
@@ -336,6 +339,14 @@ legend {
   margin-top: 30px;
 }
 
+body {
+  background: url(../../images/5.png) no-repeat 50% 85.3%;
+}
+
+.wrap {
+  opacity: 0.8;
+}
+
 .slide-intro swiper-slide {
   height: 624px;
 }
@@ -355,7 +366,7 @@ legend {
   font-size: 14px;
   line-height: 24px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   color: #57575B;
 }
 
@@ -495,4 +506,91 @@ legend {
 }
 .count-list li p span {
   font-size: 14px;
+}
+
+.sec-biz .biz-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+.sec-biz .biz-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 100px;
+}
+.sec-biz .biz-list:nth-child(2), .sec-biz .biz-list:nth-child(4) {
+  transform: translateY(200px);
+}
+.sec-biz .biz-marketo,
+.sec-biz .biz-bio {
+  margin: 0;
+}
+.sec-biz img {
+  border-radius: 10px;
+  height: 356px;
+  width: 170px;
+}
+.sec-biz .biz-snack-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+.sec-biz .biz-dryou-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 75% 100%;
+     object-position: 75% 100%;
+}
+.sec-biz .biz-marketo-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+.sec-biz .biz-bio-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 45% 100%;
+     object-position: 45% 100%;
+}
+.sec-biz .biz-txt {
+  width: 170px;
+  text-align: center;
+  margin-top: 15px;
+}
+.sec-biz .biz-txt .biz-poppins {
+  font-family: "poppins";
+  font-size: 18px;
+}
+.sec-biz .biz-txt p {
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 20px;
+  color: #57575B;
+  margin-top: 12px;
+}
+.sec-biz .biz-txt p span {
+  display: block;
+}
+
+.sec-news .news-tit {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.sec-news .news-tit a {
+  display: flex;
+}
+.sec-news .news-tit a .material-symbols-rounded {
+  font-size: 30px;
+}
+.sec-news .tit-and-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=comm.css.map */

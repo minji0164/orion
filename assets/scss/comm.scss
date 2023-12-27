@@ -44,6 +44,10 @@
     .sec-perf .inner {
         padding: 70px 0;
     }
+
+    .sec-biz .inner {
+        padding: 80px 0 270px 0;
+    }
 }
 
 
@@ -88,15 +92,17 @@
 
 
 // footer
-// body {
-//     // background: url(../../images/1.png) no-repeat 50% 0;
-//     // background: url(../../images/2.png) no-repeat 50% 22.1%;
-//     background: url(../../images/3.png) no-repeat 50% 45.5%;
-// }
+body {
+    // background: url(../../images/1.png) no-repeat 50% 0;
+    // background: url(../../images/2.png) no-repeat 50% 22.1%;
+    // background: url(../../images/3.png) no-repeat 50% 45.5%;
+    // background: url(../../images/4.png) no-repeat 50% 67.2%;
+    background: url(../../images/5.png) no-repeat 50% 85.3%;
+}
 
-// .wrap {
-//     opacity: 0.8;
-// }
+.wrap {
+    opacity: 0.8;
+}
 
 @import 'main', 'sub1';
 // 우선순위로 먹혀야 하기 때문에 밑으로 들어감

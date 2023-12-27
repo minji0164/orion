@@ -35,6 +35,7 @@
         &:nth-child(4) {
             transform: translateY(80px);
         }
+
         &:nth-child(5) {
             transform: translateX(90px);
         }
@@ -161,6 +162,7 @@
             opacity: 0.5;
             background: $gray-200;
         }
+
         // &:nth-child(1) .perf-txt::before {
         //     background-image: url(../../images/icon/factory_FILL1_wght400_GRAD0_opsz20.svg);
         // }
@@ -169,33 +171,123 @@
             gap: 7px;
             display: flex;
         }
+
         .perf-txt {
             color: $gray-300;
             font-size: 14px;
             display: flex;
         }
+
         .material-symbols-rounded {
             font-size: 20px;
             color: $gray-200;
         }
+
         // .perf-txt::before {
         //     display: block;
         //     content: '';
         //     width: 20px;
         //     height: 20px;
-            
+
         // }
         p {
             display: flex;
             align-items: baseline;
             margin-top: 7px;
             gap: 7px;
+
             em {
                 font-size: 50px;
             }
+
             span {
                 font-size: 14px;
             }
         }
     }
+}
+
+.sec-biz {
+    .biz-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+
+    .biz-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin-bottom: 100px;
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            transform: translateY(200px);
+        }
+    }
+    .biz-marketo,
+    .biz-bio {
+        margin: 0;
+    }
+
+    img {
+        border-radius: 10px;
+        height: 356px;
+        width: 170px;
+    }
+
+    .biz-snack-img {
+        object-fit: cover;
+        object-position: 50% 100%;
+    }
+    .biz-dryou-img {
+        object-fit: cover;
+        object-position: 75% 100%;
+    }
+    .biz-marketo-img {
+        object-fit: cover;
+        object-position: 50% 100%;
+    }
+    .biz-bio-img {
+        object-fit: cover;
+        object-position: 45% 100%;
+    }
+    .biz-txt {
+        width: 170px;
+        text-align: center;
+        margin-top: 15px;
+        .biz-poppins {
+            @include pop-bold-s;
+        }
+        p {
+            padding: 0 20px;
+            @include p-regular;
+            margin-top: 12px;
+            span {
+                display: block;
+            }
+        }
+    }
+}
+
+.sec-news {
+    .news-tit{
+        text-align-last: left;
+        a {
+            display: flex;
+            .material-symbols-rounded {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .tit-and-more {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .news-list
 }
