@@ -289,5 +289,33 @@
         align-items: center;
     }
 
-    .news-list
-}
+    .w-full {
+        width: 100%;
+    }
+    .news-list {
+        display: flex;
+        gap: 14px;
+        margin-top: 60px;
+        
+        a {
+
+        }
+        img {
+            border-radius: 10px;
+            width: 295px;
+            height: 205px;
+        }
+        .new-img1 {
+            object-fit: cover;
+            object-position: 50% 100%;
+        }
+        .new-img2 {
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+        .new-img3 {
+            object-fit: cover;
+            object-position: 50% 100%;
+        }
+    }
+}    
