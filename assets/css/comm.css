@@ -306,6 +306,9 @@ legend {
 #main .sec-biz .inner {
   padding: 80px 0 270px 0;
 }
+#main .sec-cooperation .inner {
+  padding: 55px 0;
+}
 
 #main .slide-intro {
   position: relative;
@@ -339,14 +342,6 @@ legend {
   margin-top: 30px;
 }
 
-body {
-  background: url(../../images/5.png) no-repeat 50% 83.7%;
-}
-
-.wrap {
-  opacity: 0.8;
-}
-
 .slide-intro swiper-slide {
   height: 624px;
 }
@@ -374,9 +369,9 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
+  flex-direction: row;
   height: auto;
-  width: auto;
+  width: 100%;
   margin-top: 50px;
 }
 .essence-list li {
@@ -389,7 +384,7 @@ body {
   transform: translateY(80px);
 }
 .essence-list li:nth-child(5) {
-  transform: translateX(90px);
+  transform: translateX(-90px);
 }
 .essence-list li a {
   width: 100%;
@@ -403,7 +398,7 @@ body {
 }
 .essence-list li a::before {
   margin: 0 auto;
-  display: flex;
+  display: block;
   content: "";
   width: 60px;
   height: 60px;
@@ -579,9 +574,16 @@ body {
   display: block;
 }
 
+.sec-news {
+  background: #F6F7F8;
+}
+.sec-news .inner {
+  margin: 0;
+}
 .sec-news .news-tit {
   -moz-text-align-last: left;
        text-align-last: left;
+  margin: 0 20px;
 }
 .sec-news .news-tit a {
   display: flex;
@@ -598,11 +600,24 @@ body {
   width: 100%;
 }
 .sec-news .news-list {
+  -ms-overflow-style: none;
+}
+.sec-news .news-list::-webkit-scrollbar {
+  display: none;
+}
+.sec-news .news-list {
+  overflow-y: clip;
+  overflow-x: auto;
   display: flex;
   gap: 14px;
+  margin-left: 20px;
   margin-top: 60px;
 }
+.sec-news .news-list .list:nth-child(3) {
+  margin-right: 20px;
+}
 .sec-news .news-list img {
+  display: block;
   border-radius: 10px;
   width: 295px;
   height: 205px;
@@ -624,4 +639,122 @@ body {
      object-fit: cover;
   -o-object-position: 50% 100%;
      object-position: 50% 100%;
+}
+.sec-news .news-list .news-txt {
+  width: 295px;
+  text-align: left;
+  margin-top: 5px;
+}
+.sec-news .news-list .news-txt .txt-primary {
+  font-size: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #E30512;
+}
+.sec-news .news-list .news-txt .txt-body {
+  font-size: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 3px;
+  color: #212126;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sec-cooperation {
+  position: relative;
+}
+.sec-cooperation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../images/main/cooper.png);
+  background-repeat: no-repeat;
+}
+.sec-cooperation .cooper-tit {
+  position: relative;
+  font-size: 40px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 46px;
+  color: #fff;
+}
+.sec-cooperation .cooper-tit h2 {
+  position: absolute;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+.sec-cooperation .cooper-tit span {
+  display: block;
+}
+.sec-cooperation .btn-area {
+  position: relative;
+  margin-top: 60px;
+}
+.sec-cooperation .btn-area a {
+  gap: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 36px;
+  border-radius: 50px;
+  background: #212126;
+}
+.sec-cooperation .btn-area .btn-area-txt {
+  font-size: 14px;
+  color: #fff;
+}
+.sec-cooperation .btn-area .material-symbols-rounded {
+  font-size: 16px;
+  color: #fff;
+}
+
+#footer {
+  background: #57575B;
+}
+#footer .inner {
+  padding: 80px 0;
+}
+#footer .menu-list {
+  margin-top: 60px;
+}
+#footer .menu-list li {
+  font-size: 40px;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 15px;
+}
+#footer .menu-list li:nth-child(1) {
+  margin: 0;
+}
+#footer .menu-list a {
+  color: #fff;
+}
+#footer .address-list {
+  margin-top: 60px;
+}
+#footer .address-list li {
+  line-height: 24px;
+  font-size: 14px;
+  color: #C3C3C5;
+}
+#footer .address-list span {
+  color: #fff;
+}
+#footer .bottom {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #C3C3C5;
+}
+#footer .sns {
+  margin-top: 20px;
+}
+#footer .sns .sns-list {
+  display: flex;
+  gap: 16px;
 }/*# sourceMappingURL=comm.css.map */
