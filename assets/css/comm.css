@@ -371,7 +371,7 @@ legend {
   flex-wrap: wrap;
   flex-direction: row;
   height: auto;
-  width: 100%;
+  width: auto;
   margin-top: 50px;
 }
 .essence-list li {
@@ -674,6 +674,8 @@ legend {
   height: 100%;
   background-image: url(../../images/main/cooper.png);
   background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .sec-cooperation .cooper-tit {
   position: relative;
