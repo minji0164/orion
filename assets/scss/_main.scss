@@ -1,9 +1,4 @@
-.slide-intro {
-    swiper-slide {
-        height: 624px;
-    }
-}
-
+//main
 .inner {
     margin: 0 20px;
 }
@@ -16,6 +11,17 @@
     @include p-regular;
 }
 
+// ----------------------------------------------------------------------------------1
+// sec-visual
+// swiper-slide 
+.slide-intro {
+    swiper-slide {
+        height: 624px;
+    }
+}
+
+// ----------------------------------------------------------------------------------2
+// sec-essence
 .essence-list {
     display: flex;
     justify-content: center;
@@ -33,7 +39,7 @@
 
         &:nth-child(2),
         &:nth-child(4) {
-            transform: translateY(80px);
+            transform: translateY(90px);
         }
 
         &:nth-child(5) {
@@ -68,35 +74,25 @@
                 .essence-name {
                     color: $white;
                 }
-
-                // .essence-name {
-                //     display: none;
-                // }
-                // .essence-txt {
-                //     color: $white;
-                //     text-align: center;
-                //     font-size: 14px;
-                //     margin: 20px 20px 0;
-                //     display: block;
-                // }
             }
         }
-    }
 
-    .essence-txt {
-        display: none;
+        .essence-name {
+            position: absolute;
+            margin-top: 80px;
+            color: $txtDefult;
+            font-size: 14px;
+            font-weight: 700;
+        }
 
-    }
+        .essence-txt {
+            display: none;
 
-    .essence-name {
-        position: absolute;
-        margin-top: 80px;
-        color: $txtDefult;
-        font-size: 14px;
-        font-weight: 700;
+        }
     }
 }
 
+// essence-list img
 .essence-list {
     .contractor a::before {
         background-image: url(../../images/icon/e-contractor.png);
@@ -140,78 +136,72 @@
     }
 }
 
+// ----------------------------------------------------------------------------------3
+// sec-perf
 .sec-perf {
     background: $gray-100;
-}
 
-.count-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 35px 0px;
-    margin-top: 60px;
-    // background: #ddd;
+    .count-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 35px 0px;
+        margin-top: 60px;
+        // background: #ddd;
 
-    li {
-        position: relative;
-        width: 180px;
-        height: 120px;
+        li {
+            position: relative;
+            width: 180px;
+            height: 120px;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 0.5px;
-            opacity: 0.5;
-            background: $gray-200;
-        }
-
-        // &:nth-child(1) .perf-txt::before {
-        //     background-image: url(../../images/icon/factory_FILL1_wght400_GRAD0_opsz20.svg);
-        // }
-        .icon-txt {
-            margin-top: 20px;
-            gap: 7px;
-            display: flex;
-        }
-
-        .perf-txt {
-            color: $gray-300;
-            font-size: 14px;
-            display: flex;
-        }
-
-        .material-symbols-rounded {
-            font-size: 20px;
-            color: $gray-200;
-        }
-
-        // .perf-txt::before {
-        //     display: block;
-        //     content: '';
-        //     width: 20px;
-        //     height: 20px;
-
-        // }
-        p {
-            display: flex;
-            align-items: baseline;
-            margin-top: 7px;
-            gap: 7px;
-
-            em {
-                font-size: 50px;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 0.5px;
+                opacity: 0.5;
+                background: $gray-200;
             }
 
-            span {
-                font-size: 14px;
+            .icon-txt {
+                margin-top: 20px;
+                gap: 7px;
+                display: flex;
+
+                .perf-txt {
+                    color: $gray-300;
+                    font-size: 14px;
+                    display: flex;
+                }
+
+                .material-symbols-rounded {
+                    font-size: 20px;
+                    color: $gray-200;
+                }
+            }
+
+            p {
+                display: flex;
+                align-items: baseline;
+                margin-top: 7px;
+                gap: 7px;
+
+                em {
+                    font-size: 50px;
+                }
+
+                span {
+                    font-size: 14px;
+                }
             }
         }
     }
 }
 
+// ----------------------------------------------------------------------------------4
+// sec-biz
 .sec-biz {
     .biz-content {
         display: flex;
@@ -231,60 +221,64 @@
         &:nth-child(4) {
             transform: translateY(200px);
         }
-    }
 
-    .biz-marketo,
-    .biz-bio {
-        margin: 0;
-    }
-
-    img {
-        border-radius: 10px;
-        height: 356px;
-        width: 170px;
-    }
-
-    .biz-snack-img {
-        object-fit: cover;
-        object-position: 50% 100%;
-    }
-
-    .biz-dryou-img {
-        object-fit: cover;
-        object-position: 75% 100%;
-    }
-
-    .biz-marketo-img {
-        object-fit: cover;
-        object-position: 50% 100%;
-    }
-
-    .biz-bio-img {
-        object-fit: cover;
-        object-position: 45% 100%;
-    }
-
-    .biz-txt {
-        width: 170px;
-        text-align: center;
-        margin-top: 15px;
-
-        .biz-poppins {
-            @include pop-bold-s;
+        // biz-list img
+        img {
+            border-radius: 10px;
+            height: 356px;
+            width: 170px;
         }
 
-        p {
-            padding: 0 20px;
-            @include p-regular;
-            margin-top: 12px;
+        .biz-snack-img {
+            object-fit: cover;
+            object-position: 50% 100%;
+        }
+
+        .biz-dryou-img {
+            object-fit: cover;
+            object-position: 75% 100%;
+        }
+
+        .biz-marketo-img {
+            object-fit: cover;
+            object-position: 50% 100%;
+        }
+
+        .biz-bio-img {
+            object-fit: cover;
+            object-position: 45% 100%;
+        }
+
+        // biz-txt
+        .biz-txt {
+            width: 170px;
+            text-align: center;
+            margin-top: 15px;
+
+            .biz-poppins {
+                @include pop-bold-s;
+            }
+
+            p {
+                padding: 0 20px;
+                @include p-regular;
+                margin-top: 12px;
+            }
 
             span {
                 display: block;
             }
         }
     }
+
+    .biz-marketo,
+    .biz-bio {
+        margin: 0;
+    }
 }
 
+// ----------------------------------------------------------------------------------5
+// sec-news
 .sec-news {
     background: $gray-100;
 
@@ -292,9 +286,16 @@
         margin: 0;
     }
 
+    // news-tit------------------------------------
     .news-tit {
         text-align-last: left;
         margin: 0 20px;
+
+        .tit-and-more {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
         a {
             display: flex;
@@ -305,16 +306,11 @@
         }
     }
 
-    .tit-and-more {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 
     .w-full {
         width: 100%;
     }
-
+    // news-list---------------------------------------
     .news-list {
         // Internet Explorer
         -ms-overflow-style: none;
@@ -323,6 +319,7 @@
         &::-webkit-scrollbar {
             display: none;
         }
+        // 클래스 따로 선택해줘야 적용이 된다 ㅜ
     }
 
     .news-list {
@@ -340,9 +337,7 @@
                 margin-right: 20px;
             }
         }
-
-        a {}
-
+        // news-list img---------------------
         img {
             display: block;
             border-radius: 10px;
@@ -365,6 +360,7 @@
             object-position: 50% 100%;
         }
 
+        // news-txt----------------------------
         .news-txt {
             width: 295px;
             text-align: left;
@@ -377,7 +373,6 @@
             }
 
             .txt-body {
-
                 @include p-bold;
                 font-size: 14px;
                 margin-top: 3px;
@@ -391,6 +386,8 @@
     }
 }
 
+// ----------------------------------------------------------------------------------6
+// sec-cooperation
 .sec-cooperation {
     position: relative;
 
@@ -403,7 +400,6 @@
         height: 100%;
         background-image: url(../../images/main/cooper-m.png);
         background-repeat: no-repeat;
-        // 교보 이노스테이지 보고 포토샵에서 이미지 크기 맞추기
     }
 
     .cooper-tit {
@@ -452,6 +448,8 @@
     }
 }
 
+// ----------------------------------------------------------------------------------7
+// #footer
 #footer {
     background: $gray-300;
 
@@ -485,10 +483,12 @@
             font-size: 14px;
             color: $gray-200;
         }
+
         span {
             color: $white;
         }
     }
+
     .bottom {
         margin-top: 20px;
         font-size: 12px;
@@ -503,5 +503,4 @@
             gap: 16px;
         }
     }
-
 }

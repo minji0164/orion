@@ -342,10 +342,6 @@ legend {
   margin-top: 30px;
 }
 
-.slide-intro swiper-slide {
-  height: 624px;
-}
-
 .inner {
   margin: 0 20px;
 }
@@ -365,6 +361,10 @@ legend {
   color: #57575B;
 }
 
+.slide-intro swiper-slide {
+  height: 624px;
+}
+
 .essence-list {
   display: flex;
   justify-content: center;
@@ -381,7 +381,7 @@ legend {
   width: 166px;
 }
 .essence-list li:nth-child(2), .essence-list li:nth-child(4) {
-  transform: translateY(80px);
+  transform: translateY(90px);
 }
 .essence-list li:nth-child(5) {
   transform: translateX(-90px);
@@ -413,15 +413,15 @@ legend {
 .essence-list li a:hover .essence-name {
   color: #fff;
 }
-.essence-list .essence-txt {
-  display: none;
-}
-.essence-list .essence-name {
+.essence-list li .essence-name {
   position: absolute;
   margin-top: 80px;
   color: #212126;
   font-size: 14px;
   font-weight: 700;
+}
+.essence-list li .essence-txt {
+  display: none;
 }
 
 .essence-list .contractor a::before {
@@ -458,20 +458,19 @@ legend {
 .sec-perf {
   background: #F6F7F8;
 }
-
-.count-list {
+.sec-perf .count-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 35px 0px;
   margin-top: 60px;
 }
-.count-list li {
+.sec-perf .count-list li {
   position: relative;
   width: 180px;
   height: 120px;
 }
-.count-list li::before {
+.sec-perf .count-list li::before {
   content: "";
   position: absolute;
   top: 0;
@@ -481,30 +480,30 @@ legend {
   opacity: 0.5;
   background: #C3C3C5;
 }
-.count-list li .icon-txt {
+.sec-perf .count-list li .icon-txt {
   margin-top: 20px;
   gap: 7px;
   display: flex;
 }
-.count-list li .perf-txt {
+.sec-perf .count-list li .icon-txt .perf-txt {
   color: #57575B;
   font-size: 14px;
   display: flex;
 }
-.count-list li .material-symbols-rounded {
+.sec-perf .count-list li .icon-txt .material-symbols-rounded {
   font-size: 20px;
   color: #C3C3C5;
 }
-.count-list li p {
+.sec-perf .count-list li p {
   display: flex;
   align-items: baseline;
   margin-top: 7px;
   gap: 7px;
 }
-.count-list li p em {
+.sec-perf .count-list li p em {
   font-size: 50px;
 }
-.count-list li p span {
+.sec-perf .count-list li p span {
   font-size: 14px;
 }
 
@@ -524,49 +523,45 @@ legend {
 .sec-biz .biz-list:nth-child(2), .sec-biz .biz-list:nth-child(4) {
   transform: translateY(200px);
 }
-.sec-biz .biz-marketo,
-.sec-biz .biz-bio {
-  margin: 0;
-}
-.sec-biz img {
+.sec-biz .biz-list img {
   border-radius: 10px;
   height: 356px;
   width: 170px;
 }
-.sec-biz .biz-snack-img {
+.sec-biz .biz-list .biz-snack-img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 100%;
      object-position: 50% 100%;
 }
-.sec-biz .biz-dryou-img {
+.sec-biz .biz-list .biz-dryou-img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 75% 100%;
      object-position: 75% 100%;
 }
-.sec-biz .biz-marketo-img {
+.sec-biz .biz-list .biz-marketo-img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 100%;
      object-position: 50% 100%;
 }
-.sec-biz .biz-bio-img {
+.sec-biz .biz-list .biz-bio-img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 45% 100%;
      object-position: 45% 100%;
 }
-.sec-biz .biz-txt {
+.sec-biz .biz-list .biz-txt {
   width: 170px;
   text-align: center;
   margin-top: 15px;
 }
-.sec-biz .biz-txt .biz-poppins {
+.sec-biz .biz-list .biz-txt .biz-poppins {
   font-family: "poppins";
   font-size: 18px;
 }
-.sec-biz .biz-txt p {
+.sec-biz .biz-list .biz-txt p {
   padding: 0 20px;
   font-size: 14px;
   line-height: 24px;
@@ -575,8 +570,12 @@ legend {
   color: #57575B;
   margin-top: 12px;
 }
-.sec-biz .biz-txt p span {
+.sec-biz .biz-list .biz-txt span {
   display: block;
+}
+.sec-biz .biz-marketo,
+.sec-biz .biz-bio {
+  margin: 0;
 }
 
 .sec-news {
@@ -590,16 +589,16 @@ legend {
        text-align-last: left;
   margin: 0 20px;
 }
+.sec-news .news-tit .tit-and-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .sec-news .news-tit a {
   display: flex;
 }
 .sec-news .news-tit a .material-symbols-rounded {
   font-size: 30px;
-}
-.sec-news .tit-and-more {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .sec-news .w-full {
   width: 100%;
