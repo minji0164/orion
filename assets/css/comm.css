@@ -387,6 +387,7 @@ legend {
   transform: translateX(-90px);
 }
 .essence-list li a {
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -397,11 +398,14 @@ legend {
   background: #F6F7F8;
 }
 .essence-list li a::before {
-  margin: 0 auto;
-  display: block;
   content: "";
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 .essence-list li a:hover {
   background: #E30512;
@@ -413,7 +417,8 @@ legend {
   display: none;
 }
 .essence-list .essence-name {
-  margin-top: 20px;
+  position: absolute;
+  margin-top: 80px;
   color: #212126;
   font-size: 14px;
   font-weight: 700;
@@ -672,10 +677,8 @@ legend {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../../images/main/cooper.png);
+  background-image: url(../../images/main/cooper-m.png);
   background-repeat: no-repeat;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .sec-cooperation .cooper-tit {
   position: relative;
