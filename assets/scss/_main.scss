@@ -11,12 +11,37 @@
     @include p-regular;
 }
 
+@media screen and (min-width: 1280px) {
+    .inner {
+        margin: 0 80px;
+    }
+
+    .main-tit {
+        @include pop-bold-d;
+        span {
+            display: block;
+        }
+    }
+    
+    .main-tit-sub {
+        @include p-regular-d;
+    }
+}
+
 // ----------------------------------------------------------------------------------1
 // sec-visual
 // swiper-slide 
 .slide-intro {
     swiper-slide {
         height: 624px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .slide-intro {
+        swiper-slide {
+            height: 900px;
+        }
     }
 }
 
@@ -88,6 +113,80 @@
         .essence-txt {
             display: none;
 
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .essence-inner {
+        display: flex;
+    }
+    .essence-list {
+        display: flex;
+        position: relative;
+        height: auto;
+        width: auto;
+        margin: 50px 0 0 0px;
+        transform: translate(0, 0px);
+    
+        li {
+            display: flex;
+            margin: 7px;
+            height: 282px;
+            width: 282px;
+    
+            &:nth-child(2),
+            &:nth-child(4) {
+                transform: translateY(0);
+            }
+    
+            &:nth-child(5) {
+                transform: translateX(-350px);
+            }
+    
+            a {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background: $gray-100;
+    
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    background-position: 50% 30%;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                }
+    
+                &:hover {
+                    background: $primary;
+    
+                    .essence-name {
+                        color: $white;
+                    }
+                }
+            }
+    
+            .essence-name {
+                position: absolute;
+                margin-top: 80px;
+                color: $txtDefult;
+                font-size: 14px;
+                font-weight: 700;
+            }
+    
+            .essence-txt {
+                display: none;
+    
+            }
         }
     }
 }

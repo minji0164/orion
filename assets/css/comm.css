@@ -282,7 +282,7 @@ legend {
 
 @media screen and (min-width: 1280px) {
   .wrap {
-    max-width: none;
+    max-width: 1440px;
   }
 }
 #header {
@@ -297,7 +297,6 @@ legend {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #999;
 }
 #header #logo {
   position: relative;
@@ -310,6 +309,7 @@ legend {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: #999;
 }
 #header .col-right .util .lang-ico {
   padding: 0 15px 0 0;
@@ -399,6 +399,11 @@ legend {
 #main .inner {
   padding: 80px 0;
 }
+@media screen and (min-width: 1280px) {
+  #main .inner {
+    padding: 140px 0;
+  }
+}
 #main .sec-perf .inner {
   padding: 70px 0;
 }
@@ -407,6 +412,16 @@ legend {
 }
 #main .sec-cooperation .inner {
   padding: 55px 0;
+}
+#main .sec-about .inner {
+  padding: 105px 0;
+}
+#main .sec-gnb .inner {
+  padding: 10px 0;
+}
+#main .sec-mgmt .inner,
+#main .sec-mgmt2 .inner {
+  padding: 80px 0 0;
 }
 
 #main .slide-intro img {
@@ -427,14 +442,43 @@ legend {
   position: absolute;
   top: 168px;
 }
-#main .slide-intro .link-intro .intro-tit {
+#main .slide-intro .link-intro .intro-tit1 {
   font-size: 40px;
   font-weight: 700;
+}
+#main .slide-intro .link-intro .intro-tit1 span {
+  display: block;
+}
+#main .slide-intro .link-intro .intro-tit2 {
+  display: none;
 }
 #main .slide-intro .link-intro .intro-txt {
   color: #F6F7F8;
   font-size: 14px;
   margin-top: 30px;
+}
+@media screen and (min-width: 1280px) {
+  #main .slide-intro .link-intro .intro-inner {
+    text-align: left;
+    left: 80px;
+    top: 240px;
+  }
+  #main .slide-intro .link-intro .intro-tit2 {
+    font-size: 40px;
+    font-weight: 700;
+    font-size: 60px;
+    display: contents;
+  }
+  #main .slide-intro .link-intro .intro-tit2 span {
+    display: block;
+  }
+  #main .slide-intro .link-intro .intro-tit1 {
+    display: none;
+  }
+  #main .slide-intro .link-intro .intro-txt {
+    margin-top: 40px;
+    font-size: 22px;
+  }
 }
 
 .inner {
@@ -456,10 +500,36 @@ legend {
   color: #57575B;
 }
 
+@media screen and (min-width: 1280px) {
+  .inner {
+    margin: 0 80px;
+  }
+  .main-tit {
+    font-family: "poppins";
+    font-size: 48px;
+    line-height: 56px;
+    text-align: left;
+  }
+  .main-tit span {
+    display: block;
+  }
+  .main-tit-sub {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: left;
+    margin-top: 20px;
+    color: #57575B;
+  }
+}
 .slide-intro swiper-slide {
   height: 624px;
 }
 
+@media screen and (min-width: 1280px) {
+  .slide-intro swiper-slide {
+    height: 900px;
+  }
+}
 .essence-list {
   display: flex;
   justify-content: center;
@@ -519,6 +589,68 @@ legend {
   display: none;
 }
 
+@media screen and (min-width: 1280px) {
+  .essence-inner {
+    display: flex;
+  }
+  .essence-list {
+    display: flex;
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 50px 0 0 0px;
+    transform: translate(0, 0px);
+  }
+  .essence-list li {
+    display: flex;
+    margin: 7px;
+    height: 282px;
+    width: 282px;
+  }
+  .essence-list li:nth-child(2), .essence-list li:nth-child(4) {
+    transform: translateY(0);
+  }
+  .essence-list li:nth-child(5) {
+    transform: translateX(-350px);
+  }
+  .essence-list li a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #F6F7F8;
+  }
+  .essence-list li a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+  .essence-list li a:hover {
+    background: #E30512;
+  }
+  .essence-list li a:hover .essence-name {
+    color: #fff;
+  }
+  .essence-list li .essence-name {
+    position: absolute;
+    margin-top: 80px;
+    color: #212126;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .essence-list li .essence-txt {
+    display: none;
+  }
+}
 .essence-list .contractor a::before {
   background-image: url(../../images/icon/e-contractor.png);
 }
@@ -856,4 +988,189 @@ legend {
 #footer .sns .sns-list {
   display: flex;
   gap: 16px;
+}
+
+.sec-about .text-wrap {
+  text-align: center;
+}
+.sec-about .text-wrap .about-txt1 {
+  font-size: 40px;
+  font-weight: 700;
+  font-size: 30px;
+}
+.sec-about .text-wrap .about-txt1 strong {
+  color: #E30512;
+}
+.sec-about .text-wrap .about-txt2 {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 20px;
+  color: #57575B;
+  margin-top: 35px;
+}
+.sec-about span {
+  display: block;
+}
+
+.sec-gnb {
+  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.25);
+  position: relative;
+  background: #fff;
+}
+.sec-gnb .gnb-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+.sec-gnb .gnb-flex a {
+  border-radius: 50px;
+  padding: 8px 13px;
+  color: #57575B;
+}
+.sec-gnb .gnb-flex a:nth-child(1) {
+  background: #000;
+  color: #fff;
+}
+
+.contents .sec-img {
+  position: relative;
+  height: 215px;
+}
+.contents .sec-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../images/sub1/office-m.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contents .sec-mgmt .mgmt-tit {
+  text-align: center;
+}
+.contents .sec-mgmt .mgmt-tit .main-tit-preten {
+  font-size: 30px;
+}
+.contents .sec-mgmt .mgmt-tit .main-tit-sub {
+  margin-top: 10px;
+}
+.contents .sec-mgmt .mgmt-tit .main-tit-sub span {
+  display: block;
+}
+.contents .sec-mgmt .cards {
+  margin-top: 60px;
+}
+.contents .sec-mgmt .cards .cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contents .sec-mgmt .cards li {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 165px;
+}
+.contents .sec-mgmt .cards li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.contents .sec-mgmt .cards li .card1 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 70%;
+     object-position: 100% 70%;
+}
+.contents .sec-mgmt .cards li .card2 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 35%;
+     object-position: 100% 35%;
+}
+.contents .sec-mgmt .cards li .card3 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 70%;
+     object-position: 100% 70%;
+}
+.contents .sec-mgmt .cards li .card4 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 20%;
+     object-position: 100% 20%;
+}
+.contents .sec-mgmt .cards li strong {
+  position: absolute;
+  font-size: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  bottom: 15px;
+  left: 20px;
+  color: #fff;
+}
+
+.sec-mgmt2 .inner {
+  margin: 0;
+}
+.sec-mgmt2 .mgmt2-tit {
+  margin: 0 20px;
+}
+.sec-mgmt2 .mgmt2-tit .main-tit-preten {
+  text-align: center;
+  font-size: 30px;
+}
+.sec-mgmt2 .mgmt2-tit .main-tit-sub span {
+  display: block;
+}
+.sec-mgmt2 .map {
+  margin-top: 60px;
+}
+.sec-mgmt2 .map img {
+  width: 100%;
+}
+.sec-mgmt2 .contry {
+  margin: 15px 20px 0;
+}
+.sec-mgmt2 .contry .contry-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.sec-mgmt2 .contry .contry-list .list-tit {
+  padding: 25px;
+  text-align: center;
+  width: 100%;
+  height: 165px;
+  border-radius: 10px;
+  font-size: 18px;
+  background: #F6F7F8;
+}
+.sec-mgmt2 .contry .contry-list .contry-list-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 28px;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  font-size: 14px;
+  color: #57575B;
+}
+
+.sec-mgmt3 .mgmt3-tit .main-tit-preten {
+  text-align: center;
+}
+.sec-mgmt3 .mgmt3-tit span {
+  display: block;
+}
+.sec-mgmt3 .mgmt3-tit img {
+  margin-top: 40px;
+  width: 100%;
 }/*# sourceMappingURL=comm.css.map */

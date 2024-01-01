@@ -16,10 +16,14 @@
 }
 
 @media screen and (min-width: 1280px) {
-    .wrap {
-        max-width: none
-    }
 
+
+}
+
+@media screen and (min-width: 1280px) {
+    .wrap {
+        max-width: 1440px;
+    }
 }
 // header-----------------------------------------------------------------------
 #header {
@@ -35,7 +39,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background: #999;
     }
     #logo {
         position: relative;
@@ -48,6 +51,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        background: #999;
 
         .util {
             .lang-ico {
@@ -125,6 +129,7 @@
         }
 
         // gnb--------------------------------------------------------------------
+
         #gnb {
             // display: flex;
             justify-content: center;
@@ -165,6 +170,12 @@
         padding: 80px 0;
     }
     
+    @media screen and (min-width: 1280px) {
+        .inner {
+            padding: 140px 0;
+        }
+    }
+    
     .sec-perf .inner {
         padding: 70px 0;
     }
@@ -176,6 +187,21 @@
     .sec-cooperation .inner {
         padding: 55px 0;
     }
+
+    .sec-about .inner {
+        padding: 105px 0;
+    }
+
+    .sec-gnb .inner { 
+        padding: 10px 0;
+    }
+
+    .sec-mgmt .inner,
+    .sec-mgmt2 .inner {
+        padding: 80px 0 0;
+    }
+
+    
 }
 
 
@@ -200,8 +226,15 @@
                 top: 168px;
             }
 
-            .intro-tit {
+            .intro-tit1 {
                 @include p-bold;
+
+                span {
+                    display: block;
+                }
+            }
+            .intro-tit2 {
+                display: none;
             }
 
             .intro-txt {
@@ -210,15 +243,39 @@
                 margin-top: 30px;
             }
 
+            @media screen and (min-width: 1280px) {
+                .intro-inner {
+                    text-align: left;
+                    left: 80px;
+                    top: 240px;
+                }
+
+                .intro-tit2 {
+                    @include p-bold;
+                    font-size: 60px;
+                    display: contents;
+
+                    span {
+                        display: block;
+                    }
+                }
+                .intro-tit1 {
+                    display: none;
+                }
+                .intro-txt {
+                    margin-top: 40px;
+                    font-size: 22px;
+                }
+            }
         }
     }
-
 }
 
 
 // footer
 // body {
-//     background: url(../../images/1.png) no-repeat 0% 0;
+//     // background: url(../../images/1.png) no-repeat 0% 0;
+//     background: url(../../images/2-1.png) no-repeat 0% 0;
 //     // background: url(../../images/2.png) no-repeat 50% 22.1%;
 //     // background: url(../../images/3.png) no-repeat 50% 45.5%;
 //     // background: url(../../images/4.png) no-repeat 50% 67.2%;
