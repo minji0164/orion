@@ -323,13 +323,16 @@
         }
     }
 }
-.perf-go-more {
+.perf-gomore {
     display: none;
 }
 
 @media screen and (min-width: 1280px) {
     .perf-gomore {
-        display: flex;
+        display: inline-flex;
+        align-items: center;
+        margin-top: 60px;
+        gap: 8px;
     }
 
     .count-list {
