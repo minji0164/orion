@@ -36,6 +36,12 @@
     z-index: 1000;
 }
 
+@media screen and (min-width: 1280px) {
+    #header {
+        max-width: 1440px; /* 기존의 max-width 제거 */
+    }
+}
+
 #header {
     .inner {
         height: 60px;
@@ -232,6 +238,7 @@
             width: 100%;
             object-fit: cover;
         }
+        
 
         .link-intro {
             display: flex;
@@ -286,6 +293,14 @@
                     margin-top: 40px;
                     font-size: 22px;
                 }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        .slide-intro2 {
+            img {
+                height: 800px;
             }
         }
     }
