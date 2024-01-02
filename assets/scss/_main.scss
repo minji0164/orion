@@ -31,15 +31,16 @@
 // ----------------------------------------------------------------------------------1
 // sec-visual
 // swiper-slide 
-.slide-intro {
+.slide-intro2 {
     swiper-slide {
         height: 624px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .slide-intro {
+    .slide-intro2 {
         swiper-slide {
+            width: 100%;
             height: 900px;
         }
     }
@@ -120,20 +121,30 @@
 @media screen and (min-width: 1280px) {
     .essence-inner {
         display: flex;
+        position: relative;
     }
+
+    .main-tit-sub {
+        position: absolute;
+    }
+
     .essence-list {
         display: flex;
-        position: relative;
+        justify-content: flex-end;
         height: auto;
         width: auto;
-        margin: 50px 0 0 0px;
+        margin: 100px 0 0 0;
         transform: translate(0, 0px);
     
         li {
             display: flex;
-            margin: 7px;
+            margin: px;
             height: 282px;
             width: 282px;
+
+            &:nth-child(1) {
+                transform: translateY(295px);
+            }
     
             &:nth-child(2),
             &:nth-child(4) {
@@ -141,7 +152,7 @@
             }
     
             &:nth-child(5) {
-                transform: translateX(-350px);
+                transform: translateX(0);
             }
     
             a {
@@ -182,10 +193,9 @@
                 font-size: 14px;
                 font-weight: 700;
             }
-    
+            
             .essence-txt {
                 display: none;
-    
             }
         }
     }
@@ -232,6 +242,51 @@
 
     .society a:hover::before {
         background-image: url(../../images/icon/h-society.png);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .essence-list {
+        .contractor a::before {
+            background-image: url(../../images/icon/e-contractor-d.png);
+        }
+    
+        .staff a::before {
+            background-image: url(../../images/icon/e-staff-d.png);
+        }
+    
+        .sha a::before {
+            background-image: url(../../images/icon/e-sha-d.png);
+        }
+    
+        .customer a::before {
+            background-image: url(../../images/icon/e-customer-d.png);
+        }
+    
+        .society a::before {
+            background-image: url(../../images/icon/e-society-d.png);
+        }
+    
+        // hover
+        .contractor a:hover::before {
+            background-image: url(../../images/icon/h-contractor-d.png);
+        }
+    
+        .staff a:hover::before {
+            background-image: url(../../images/icon/h-staff-d.png);
+        }
+    
+        .sha a:hover::before {
+            background-image: url(../../images/icon/h-sha-d.png);
+        }
+    
+        .customer a:hover::before {
+            background-image: url(../../images/icon/h-customer-d.png);
+        }
+    
+        .society a:hover::before {
+            background-image: url(../../images/icon/h-society-d.png);
+        }
     }
 }
 
@@ -325,7 +380,7 @@
         img {
             border-radius: 10px;
             height: 356px;
-            width: 170px;
+            width: 180px;
         }
 
         .biz-snack-img {
@@ -335,7 +390,7 @@
 
         .biz-dryou-img {
             object-fit: cover;
-            object-position: 66% 100%;
+            object-position: 68% 100%;
         }
 
         .biz-marketo-img {

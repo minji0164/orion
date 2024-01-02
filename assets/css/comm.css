@@ -276,7 +276,7 @@ legend {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 420px;
+  max-width: 430px;
   margin: 0 auto;
 }
 
@@ -286,7 +286,11 @@ legend {
   }
 }
 #header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 430px;
   width: 100%;
   height: 60px;
   z-index: 1000;
@@ -309,7 +313,6 @@ legend {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #999;
 }
 #header .col-right .util .lang-ico {
   padding: 0 15px 0 0;
@@ -345,6 +348,7 @@ legend {
 }
 #header .col-right .gnb-wrap .inp-burger:checked ~ #gnb {
   left: 0;
+  opacity: 1;
 }
 #header .col-right .gnb-wrap .label-burger {
   position: relative;
@@ -380,11 +384,14 @@ legend {
   background: #fff;
   display: flex;
   transition: all 0.5s;
+  height: 640px;
+  opacity: 0;
 }
 #header .col-right .gnb-list {
   padding: 80px 0;
   margin: 0 20px;
   width: 100%;
+  height: 100%;
   font-size: 18px;
 }
 #header .col-right .gnb-list li {
@@ -424,58 +431,71 @@ legend {
   padding: 80px 0 0;
 }
 
-#main .slide-intro img {
-  height: 100%;
+.swiper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 60px;
+  height: 3px;
+  border-radius: 0;
+}
+.swiper .swiper-pagination {
+  margin-bottom: 20px;
+}
+.swiper .swiper-pagination-bullet-active {
+  background: #fff;
+  opacity: 0.5;
+}
+
+.slide-intro2 img {
+  height: 640px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#main .slide-intro .link-intro {
+.slide-intro2 .link-intro {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
-#main .slide-intro .link-intro .intro-inner {
+.slide-intro2 .link-intro .intro-inner {
   color: #fff;
   text-align: center;
   position: absolute;
-  top: 168px;
+  top: 190px;
 }
-#main .slide-intro .link-intro .intro-tit1 {
+.slide-intro2 .link-intro .intro-tit1 {
   font-size: 40px;
   font-weight: 700;
 }
-#main .slide-intro .link-intro .intro-tit1 span {
+.slide-intro2 .link-intro .intro-tit1 span {
   display: block;
 }
-#main .slide-intro .link-intro .intro-tit2 {
+.slide-intro2 .link-intro .intro-tit2 {
   display: none;
 }
-#main .slide-intro .link-intro .intro-txt {
+.slide-intro2 .link-intro .intro-txt {
   color: #F6F7F8;
   font-size: 14px;
   margin-top: 30px;
 }
 @media screen and (min-width: 1280px) {
-  #main .slide-intro .link-intro .intro-inner {
+  .slide-intro2 .link-intro .intro-inner {
     text-align: left;
     left: 80px;
     top: 240px;
   }
-  #main .slide-intro .link-intro .intro-tit2 {
+  .slide-intro2 .link-intro .intro-tit2 {
     font-size: 40px;
     font-weight: 700;
     font-size: 60px;
     display: contents;
   }
-  #main .slide-intro .link-intro .intro-tit2 span {
+  .slide-intro2 .link-intro .intro-tit2 span {
     display: block;
   }
-  #main .slide-intro .link-intro .intro-tit1 {
+  .slide-intro2 .link-intro .intro-tit1 {
     display: none;
   }
-  #main .slide-intro .link-intro .intro-txt {
+  .slide-intro2 .link-intro .intro-txt {
     margin-top: 40px;
     font-size: 22px;
   }
@@ -521,12 +541,13 @@ legend {
     color: #57575B;
   }
 }
-.slide-intro swiper-slide {
+.slide-intro2 swiper-slide {
   height: 624px;
 }
 
 @media screen and (min-width: 1280px) {
-  .slide-intro swiper-slide {
+  .slide-intro2 swiper-slide {
+    width: 100%;
     height: 900px;
   }
 }
@@ -592,26 +613,33 @@ legend {
 @media screen and (min-width: 1280px) {
   .essence-inner {
     display: flex;
+    position: relative;
+  }
+  .main-tit-sub {
+    position: absolute;
   }
   .essence-list {
     display: flex;
-    position: relative;
+    justify-content: flex-end;
     height: auto;
     width: auto;
-    margin: 50px 0 0 0px;
+    margin: 100px 0 0 0;
     transform: translate(0, 0px);
   }
   .essence-list li {
     display: flex;
-    margin: 7px;
+    margin: px;
     height: 282px;
     width: 282px;
+  }
+  .essence-list li:nth-child(1) {
+    transform: translateY(295px);
   }
   .essence-list li:nth-child(2), .essence-list li:nth-child(4) {
     transform: translateY(0);
   }
   .essence-list li:nth-child(5) {
-    transform: translateX(-350px);
+    transform: translateX(0);
   }
   .essence-list li a {
     position: relative;
@@ -682,6 +710,38 @@ legend {
   background-image: url(../../images/icon/h-society.png);
 }
 
+@media screen and (min-width: 1280px) {
+  .essence-list .contractor a::before {
+    background-image: url(../../images/icon/e-contractor-d.png);
+  }
+  .essence-list .staff a::before {
+    background-image: url(../../images/icon/e-staff-d.png);
+  }
+  .essence-list .sha a::before {
+    background-image: url(../../images/icon/e-sha-d.png);
+  }
+  .essence-list .customer a::before {
+    background-image: url(../../images/icon/e-customer-d.png);
+  }
+  .essence-list .society a::before {
+    background-image: url(../../images/icon/e-society-d.png);
+  }
+  .essence-list .contractor a:hover::before {
+    background-image: url(../../images/icon/h-contractor-d.png);
+  }
+  .essence-list .staff a:hover::before {
+    background-image: url(../../images/icon/h-staff-d.png);
+  }
+  .essence-list .sha a:hover::before {
+    background-image: url(../../images/icon/h-sha-d.png);
+  }
+  .essence-list .customer a:hover::before {
+    background-image: url(../../images/icon/h-customer-d.png);
+  }
+  .essence-list .society a:hover::before {
+    background-image: url(../../images/icon/h-society-d.png);
+  }
+}
 .sec-perf {
   background: #F6F7F8;
 }
@@ -753,7 +813,7 @@ legend {
 .sec-biz .biz-list img {
   border-radius: 10px;
   height: 356px;
-  width: 170px;
+  width: 180px;
 }
 .sec-biz .biz-list .biz-snack-img {
   -o-object-fit: cover;
@@ -764,8 +824,8 @@ legend {
 .sec-biz .biz-list .biz-dryou-img {
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 66% 100%;
-     object-position: 66% 100%;
+  -o-object-position: 68% 100%;
+     object-position: 68% 100%;
 }
 .sec-biz .biz-list .biz-marketo-img {
   -o-object-fit: cover;
