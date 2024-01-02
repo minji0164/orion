@@ -9,6 +9,10 @@
 
 .main-tit-sub {
     @include p-regular;
+
+    span {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -18,15 +22,21 @@
 
     .main-tit {
         @include pop-bold-d;
+
         span {
             display: block;
         }
     }
-    
+
     .main-tit-sub {
         @include p-regular-d;
+        
+        span {
+            display: inline;
+        }
     }
 }
+
 // ----------------------------------------------------------------------------------2
 // sec-essence
 .essence-list {
@@ -93,7 +103,7 @@
         }
 
         .essence-txt {
-            display: none;
+            opacity: 0;
 
         }
     }
@@ -105,78 +115,56 @@
         position: relative;
     }
 
-    .main-tit-sub {
+    .essence-tit .main-tit-sub {
         position: absolute;
     }
 
     .essence-list {
-        display: flex;
         justify-content: flex-end;
-        height: auto;
-        width: auto;
         margin: 100px 0 0 0;
         transform: translate(0, 0px);
-    
+
         li {
             display: flex;
-            margin: px;
             height: 282px;
             width: 282px;
 
             &:nth-child(1) {
                 transform: translateY(295px);
             }
-    
+
             &:nth-child(2),
             &:nth-child(4) {
                 transform: translateY(0);
             }
-    
+
             &:nth-child(5) {
                 transform: translateX(0);
             }
-    
+
             a {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                border-radius: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                background: $gray-100;
-    
-                &::before {
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    margin: 0 auto;
-                    display: flex;
-                    background-position: 50% 30%;
-                    background-repeat: no-repeat;
-                    position: absolute;
-                }
-    
+                flex-direction: row;
+                align-items: flex-end;
+
                 &:hover {
-                    background: $primary;
-    
+                    transition: all 0.4s;
+
                     .essence-name {
+                        opacity: 0;
+                    }
+
+                    .essence-txt {
+                        margin: 0 0 55px;
+                        opacity: 1;
                         color: $white;
+                        text-align: center;
                     }
                 }
             }
-    
+
             .essence-name {
-                position: absolute;
-                margin-top: 80px;
-                color: $txtDefult;
+                margin: 0 0 55px;
                 font-size: $font-size-18;
-                font-weight: 700;
-            }
-            
-            .essence-txt {
-                display: none;
             }
         }
     }
@@ -231,40 +219,40 @@
         .contractor a::before {
             background-image: url(../../images/icon/e-contractor-d.png);
         }
-    
+
         .staff a::before {
             background-image: url(../../images/icon/e-staff-d.png);
         }
-    
+
         .sha a::before {
             background-image: url(../../images/icon/e-sha-d.png);
         }
-    
+
         .customer a::before {
             background-image: url(../../images/icon/e-customer-d.png);
         }
-    
+
         .society a::before {
             background-image: url(../../images/icon/e-society-d.png);
         }
-    
+
         // hover
         .contractor a:hover::before {
             background-image: url(../../images/icon/h-contractor-d.png);
         }
-    
+
         .staff a:hover::before {
             background-image: url(../../images/icon/h-staff-d.png);
         }
-    
+
         .sha a:hover::before {
             background-image: url(../../images/icon/h-sha-d.png);
         }
-    
+
         .customer a:hover::before {
             background-image: url(../../images/icon/h-customer-d.png);
         }
-    
+
         .society a:hover::before {
             background-image: url(../../images/icon/h-society-d.png);
         }
@@ -275,65 +263,103 @@
 // sec-perf
 .sec-perf {
     background: $gray-100;
+}
 
-    .count-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 35px 0px;
-        margin-top: 60px;
-        // background: #ddd;
+.count-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 35px 0px;
+    margin-top: 60px;
+    // background: #ddd;
 
-        li {
-            position: relative;
-            width: 180px;
-            height: 120px;
+    li {
+        position: relative;
+        width: 180px;
+        height: 120px;
 
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 0.5px;
-                opacity: 0.5;
-                background: $gray-200;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0.5px;
+            opacity: 0.5;
+            background: $gray-200;
+        }
+
+        .icon-txt {
+            margin-top: 20px;
+            gap: 7px;
+            display: flex;
+            align-items: center;
+
+            .perf-txt {
+                color: $gray-300;
+                font-size: 14px;
+                display: flex;
             }
 
-            .icon-txt {
-                margin-top: 20px;
-                gap: 7px;
-                display: flex;
+            .material-symbols-rounded {
+                font-size: 20px;
+                color: $gray-200;
+            }
+        }
 
-                .perf-txt {
-                    color: $gray-300;
-                    font-size: 14px;
-                    display: flex;
-                }
+        p {
+            display: flex;
+            align-items: baseline;
+            margin-top: 7px;
+            gap: 7px;
 
-                .material-symbols-rounded {
-                    font-size: 20px;
-                    color: $gray-200;
-                }
+            em {
+                font-size: 50px;
             }
 
-            p {
-                display: flex;
-                align-items: baseline;
-                margin-top: 7px;
-                gap: 7px;
-
-                em {
-                    font-size: 50px;
-                }
-
-                span {
-                    font-size: 14px;
-                }
+            span {
+                font-size: 14px;
             }
         }
     }
 }
+.perf-go-more {
+    display: none;
+}
+
+@media screen and (min-width: 1280px) {
+    .perf-gomore {
+        display: flex;
+    }
+
+    .count-list {
+        margin: 0 0 0 180px;
+        gap: 60px;
+
+        li {
+            width: 337px;
+            height: 164px;
+
+            .icon-txt {
+                .perf-txt {
+                    font-size: 18px;
+                }
+            }
+            p {
+                em {
+                    font-size: 90px;
+                }
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .perf-go-more {
+        display: contents;
+    }
+}
+
 
 // ----------------------------------------------------------------------------------4
 // sec-biz
@@ -445,6 +471,7 @@
     .w-full {
         width: 100%;
     }
+
     // news-list---------------------------------------
     .news-list {
         // Internet Explorer
@@ -454,6 +481,7 @@
         &::-webkit-scrollbar {
             display: none;
         }
+
         // 클래스 따로 선택해줘야 적용이 된다 ㅜ
     }
 
@@ -472,6 +500,7 @@
                 margin-right: 20px;
             }
         }
+
         // news-list img---------------------
         img {
             display: block;

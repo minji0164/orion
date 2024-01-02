@@ -193,8 +193,24 @@
         padding: 70px 0;
     }
 
+    @media screen and (min-width: 1280px) {
+        .sec-perf .inner {
+            padding: 120px 0;
+            display: flex;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
     .sec-biz .inner {
         padding: 80px 0 270px 0;
+    }
+
+    @media screen and (min-width: 1280px) {
+        .sec-biz .inner {
+            padding: 140px 0;
+        }
     }
 
     .sec-cooperation .inner {
@@ -229,6 +245,20 @@
     .swiper-pagination-bullet-active {
         background: $white;
         opacity: 0.5;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .swiper {
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            width: 80px;
+            height: 3px;
+        }
+        .swiper-pagination {
+            margin: 0 0 100px 80px;
+            text-align: left;
+            
+        }
     }
 }
 
