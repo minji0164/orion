@@ -17,7 +17,8 @@
 
 @media screen and (min-width: 1280px) {
     .inner {
-        margin: 0 80px;
+        max-width: 1280px;
+        margin: 0 auto;
     }
 
     .main-tit {
@@ -367,6 +368,10 @@
 // ----------------------------------------------------------------------------------4
 // sec-biz
 .sec-biz {
+    .biz-content2 {
+        display: none;
+    }
+
     .biz-content {
         display: flex;
         flex-wrap: wrap;
@@ -441,14 +446,33 @@
     }
 }
 
+@media screen and (min-width: 1280px) {
+    .sec-biz {
+        .biz-content {
+            display: none;
+        }
+
+        .biz-content2 {
+            display: contents;
+        }
+
+        .slide-biz {
+            
+        }
+
+        .biz-list  {
+            img {
+                height: 430px;
+                width: 1060px;
+            }
+        }
+    }
+}
+
 // ----------------------------------------------------------------------------------5
 // sec-news
 .sec-news {
     background: $gray-100;
-
-    .inner {
-        margin: 0;
-    }
 
     // news-tit------------------------------------
     .news-tit {

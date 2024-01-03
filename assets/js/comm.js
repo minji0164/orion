@@ -8,3 +8,5 @@ var swiper = new Swiper(".slide-intro2", {
 //     disableOnInteraction: false, // 유저 상호 작용 후에도 자동 재생을 계속 활성화할지 여부
 // },
 });
+
+var swiper = new Swiper(".slide-biz", {});

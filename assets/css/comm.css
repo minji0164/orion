@@ -282,7 +282,7 @@ legend {
 
 @media screen and (min-width: 1280px) {
   .wrap {
-    max-width: 1440px;
+    max-width: none;
   }
 }
 #header {
@@ -298,7 +298,8 @@ legend {
 
 @media screen and (min-width: 1280px) {
   #header {
-    max-width: 1440px; /* 기존의 max-width 제거 */
+    max-width: 1280px;
+    /* 기존의 max-width 제거 */
   }
 }
 #header .inner {
@@ -307,30 +308,32 @@ legend {
   align-items: center;
   justify-content: space-between;
 }
-#header #logo {
+
+#logo {
   position: relative;
   z-index: 1100;
 }
-#header #logo a {
+#logo a {
   display: flex;
 }
-#header .col-right {
+
+.col-right {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#header .col-right .util .lang-ico {
+.col-right .util .lang-ico {
   padding: 0 15px 0 0;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#header .col-right .util .material-symbols-outlined {
+.col-right .util .material-symbols-outlined {
   font-size: 30px;
   color: #fff;
 }
-#header .col-right .gnb-wrap .inp-burger {
+.col-right .gnb-wrap .inp-burger {
   position: absolute;
   top: 0;
   left: 0;
@@ -339,23 +342,24 @@ legend {
   visibility: hidden;
   opacity: 0;
 }
-#header .col-right .gnb-wrap .inp-burger:checked + .label-burger .bar {
+.col-right .gnb-wrap .inp-burger:checked + .label-burger .bar {
   background: #57575B;
 }
-#header .col-right .gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(1) {
+.col-right .gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(1) {
   transform: translateY(4px) rotate(45deg);
 }
-#header .col-right .gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(2) {
+.col-right .gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(2) {
   display: none;
 }
-#header .col-right .gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(3) {
+.col-right .gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(3) {
   transform: translateY(-4px) rotate(-45deg);
 }
-#header .col-right .gnb-wrap .inp-burger:checked ~ #gnb {
+.col-right .gnb-wrap .inp-burger:checked ~ #gnb {
   left: 0;
   opacity: 1;
 }
-#header .col-right .gnb-wrap .label-burger {
+.col-right .gnb-wrap .label-burger {
+  cursor: pointer;
   position: relative;
   z-index: 1100;
   display: flex;
@@ -364,21 +368,21 @@ legend {
   flex-direction: column;
   gap: 5px;
 }
-#header .col-right .gnb-wrap .label-burger .blind {
+.col-right .gnb-wrap .label-burger .blind {
   overflow: hidden;
   position: absolute;
   width: 0;
   height: 0;
   text-indent: -9999px;
 }
-#header .col-right .gnb-wrap .label-burger .bar {
+.col-right .gnb-wrap .label-burger .bar {
   display: block;
   width: 24px;
   height: 3px;
   background: #fff;
   transition: all 0.3s;
 }
-#header .col-right #gnb {
+.col-right #gnb {
   justify-content: center;
   position: fixed;
   top: 0;
@@ -392,22 +396,54 @@ legend {
   height: 640px;
   opacity: 0;
 }
-#header .col-right .gnb-list {
+.col-right .gnb-list {
   padding: 80px 0;
   margin: 0 20px;
   width: 100%;
   height: 100%;
   font-size: 18px;
 }
-#header .col-right .gnb-list li {
+.col-right .gnb-list li {
   padding: 20px 0;
 }
-#header .col-right .gnb-list a {
+.col-right .gnb-list a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
+@media screen and (min-width: 1280px) {
+  .col-right .util .lang-ico {
+    padding: 0;
+  }
+  .col-right .gnb-wrap .inp-burger,
+  .col-right .gnb-wrap .label-burger {
+    display: none;
+  }
+  .col-right #gnb {
+    height: 60px;
+    opacity: 1;
+    left: 0;
+    transition: none;
+    background: none;
+  }
+  .col-right .gnb-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 60px;
+  }
+  .col-right .gnb-list li {
+    padding: 20px 30px;
+  }
+  .col-right .gnb-list a {
+    font-size: 16px;
+    color: #fff;
+  }
+}
 #main .inner {
   padding: 80px 0;
 }
@@ -450,7 +486,8 @@ legend {
   padding: 80px 0 0;
 }
 
-.swiper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   width: 60px;
   height: 3px;
   border-radius: 0;
@@ -464,12 +501,14 @@ legend {
 }
 
 @media screen and (min-width: 1280px) {
-  .swiper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  .swiper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     width: 80px;
     height: 3px;
   }
   .swiper .swiper-pagination {
-    margin: 0 0 100px 80px;
+    max-width: 1280px;
+    margin: 0 auto; /* 가운데 정렬을 위한 margin 추가 */
     text-align: left;
   }
 }
@@ -483,7 +522,6 @@ legend {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 .slide-intro2 .link-intro .intro-inner {
   color: #fff;
@@ -506,11 +544,21 @@ legend {
   font-size: 14px;
   margin-top: 30px;
 }
+
 @media screen and (min-width: 1280px) {
+  .slide-intro2 img {
+    height: 800px;
+  }
   .slide-intro2 .link-intro .intro-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
-    left: 80px;
-    top: 240px;
+    max-width: 1280px;
+    top: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
   }
   .slide-intro2 .link-intro .intro-tit2 {
     font-size: 40px;
@@ -527,12 +575,6 @@ legend {
   .slide-intro2 .link-intro .intro-txt {
     margin-top: 40px;
     font-size: 22px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .slide-intro2 img {
-    height: 800px;
   }
 }
 .inner {
@@ -559,7 +601,8 @@ legend {
 
 @media screen and (min-width: 1280px) {
   .inner {
-    margin: 0 80px;
+    max-width: 1280px;
+    margin: 0 auto;
   }
   .main-tit {
     font-family: "poppins";
@@ -837,6 +880,9 @@ legend {
     display: contents;
   }
 }
+.sec-biz .biz-content2 {
+  display: none;
+}
 .sec-biz .biz-content {
   display: flex;
   flex-wrap: wrap;
@@ -908,11 +954,20 @@ legend {
   margin: 0;
 }
 
+@media screen and (min-width: 1280px) {
+  .sec-biz .biz-content {
+    display: none;
+  }
+  .sec-biz .biz-content2 {
+    display: contents;
+  }
+  .sec-biz .biz-list img {
+    height: 430px;
+    width: 1060px;
+  }
+}
 .sec-news {
   background: #F6F7F8;
-}
-.sec-news .inner {
-  margin: 0;
 }
 .sec-news .news-tit {
   -moz-text-align-last: left;

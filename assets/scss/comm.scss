@@ -16,14 +16,11 @@
 }
 
 @media screen and (min-width: 1280px) {
-
-}
-
-@media screen and (min-width: 1280px) {
     .wrap {
-        max-width: 1440px;
+        max-width: none;
     }
 }
+
 // header-----------------------------------------------------------------------
 #header {
     position: fixed;
@@ -38,7 +35,8 @@
 
 @media screen and (min-width: 1280px) {
     #header {
-        max-width: 1440px; /* 기존의 max-width 제거 */
+        max-width: 1280px;
+        /* 기존의 max-width 제거 */
     }
 }
 
@@ -49,129 +47,187 @@
         align-items: center;
         justify-content: space-between;
     }
-    #logo {
-        position: relative;
-        z-index: 1100;
-        a {
-            display: flex; 
+
+}
+
+#logo {
+    position: relative;
+    z-index: 1100;
+
+    a {
+        display: flex;
+    }
+}
+
+.col-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .util {
+        .lang-ico {
+            padding: 0 15px 0 0;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .material-symbols-outlined {
+            font-size: 30px;
+            color: $white;
         }
     }
-    .col-right {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
 
+    .gnb-wrap {
+        .inp-burger {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            visibility: hidden;
+            opacity: 0;
+
+            &:checked {
+                &+.label-burger {
+                    .bar {
+                        background: $gray-300;
+
+                        &:nth-child(1) {
+                            transform: translateY(4px) rotate(45deg);
+                        }
+
+                        &:nth-child(2) {
+                            display: none;
+                        }
+
+                        &:nth-child(3) {
+                            transform: translateY(-4px) rotate(-45deg);
+                        }
+                    }
+                }
+
+                // gnb가 보이게
+                &~#gnb {
+                    left: 0;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .label-burger {
+            cursor: pointer;
+            position: relative;
+            z-index: 1100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
+
+            .blind {
+                overflow: hidden;
+                position: absolute;
+                width: 0;
+                height: 0;
+                text-indent: -9999px;
+            }
+
+            .bar {
+                display: block;
+                width: 24px;
+                height: 3px;
+                background: $white;
+                transition: all 0.3s;
+            }
+        }
+    }
+
+
+    // gnb--------------------------------------------------------------------
+
+    #gnb {
+        // display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        bottom: 0;
+        z-index: 1000;
+        background: $white;
+        display: flex;
+        transition: all 0.5s;
+        height: 640px;
+        opacity: 0;
+    }
+
+    .gnb-list {
+        padding: 80px 0;
+        margin: 0 20px;
+        width: 100%;
+        height: 100%;
+
+
+        font-size: $font-size-18;
+
+        li {
+            padding: 20px 0;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .col-right {
         .util {
             .lang-ico {
-                padding: 0 15px 0 0;
-                height: 60px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .material-symbols-outlined {
-                font-size: 30px;
-                color: $white;
+                padding: 0;
             }
         }
 
         .gnb-wrap {
-            .inp-burger {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                visibility: hidden;
-                opacity: 0;
 
-                &:checked {
-                    &+.label-burger {
-                        .bar {
-                            background: $gray-300;
-                            &:nth-child(1) {
-                                transform: translateY(4px) rotate(45deg);
-                            }
-        
-                            &:nth-child(2) {
-                                display: none;
-                            }
-        
-                            &:nth-child(3) {
-                                transform: translateY(-4px) rotate(-45deg);
-                            }
-                        }
-                    }
-        
-                    // gnb가 보이게
-                    &~#gnb {
-                        left: 0;
-                        opacity: 1;
-                    }
-                }
-            }
-
+            .inp-burger,
             .label-burger {
-                position: relative;
-                z-index: 1100;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                gap: 5px;
-
-                .blind {
-                    overflow: hidden;
-                    position: absolute;
-                    width: 0;
-                    height: 0;
-                    text-indent: -9999px;
-                }
-                .bar {
-                    display: block;
-                    width: 24px;
-                    height: 3px;
-                    background: $white;
-                    transition: all 0.3s;
-                }
+                display: none;
             }
         }
 
-        // gnb--------------------------------------------------------------------
-
         #gnb {
-            // display: flex;
-            justify-content: center;
-            position: fixed;
-            top: 0;
-            left: 100%;
-            width: 100%;
-            bottom: 0;
-            z-index: 1000;
-            background: $white;
-            display: flex;
-            transition: all 0.5s;
-            height: 640px;
-            opacity: 0;
+            height: 60px;
+            opacity: 1;
+            left: 0;
+            transition: none;
+            background: none;
         }
 
         .gnb-list {
-            padding: 80px 0;
-            margin: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
             width: 100%;
-            height: 100%;
-            
-
-            font-size: $font-size-18;
+            height: 60px;
 
             li {
-                padding: 20px 0;
+                padding: 20px 30px;
+
+                &:hover {
+                    // 헤더 그거 메뉴 넣기
+                }
             }
 
             a {
-                display: block;
-                width: 100%;
-                height: 100%;
+                font-size: $font-size-16;
+                color: $white;
             }
         }
     }
@@ -182,13 +238,13 @@
     .inner {
         padding: 80px 0;
     }
-    
+
     @media screen and (min-width: 1280px) {
         .inner {
             padding: 140px 0;
         }
     }
-    
+
     .sec-perf .inner {
         padding: 70px 0;
     }
@@ -221,7 +277,7 @@
         padding: 105px 0;
     }
 
-    .sec-gnb .inner { 
+    .sec-gnb .inner {
         padding: 10px 0;
     }
 
@@ -230,18 +286,22 @@
         padding: 80px 0 0;
     }
 
-    
+
 }
 
 .swiper {
-    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
         width: 60px;
         height: 3px;
         border-radius: 0;
     }
+
     .swiper-pagination {
         margin-bottom: 20px;
     }
+
     .swiper-pagination-bullet-active {
         background: $white;
         opacity: 0.5;
@@ -250,90 +310,110 @@
 
 @media screen and (min-width: 1280px) {
     .swiper {
-        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
             width: 80px;
             height: 3px;
         }
+
+
         .swiper-pagination {
-            margin: 0 0 100px 80px;
+            max-width: 1280px;
+            margin: 0 auto; /* 가운데 정렬을 위한 margin 추가 */
             text-align: left;
-            
+        }
+        // .swiper-pagination {
+        //     max-width: 1280px;
+        //     // margin: 0 0 100px;
+        //     text-align: left;
+        // }
+    }
+}
+
+.slide-intro2 {
+
+    img {
+        height: 640px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+    .link-intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .intro-inner {
+            color: $white;
+            text-align: center;
+            position: absolute;
+            top: 190px;
+        }
+
+        .intro-tit1 {
+            @include p-bold;
+
+            span {
+                display: block;
+            }
+        }
+
+        .intro-tit2 {
+            display: none;
+        }
+
+        .intro-txt {
+            color: $gray-100;
+            font-size: 14px;
+            margin-top: 30px;
         }
     }
 }
 
+@media screen and (min-width: 1280px) {
     .slide-intro2 {
+
         img {
-            height: 640px;
-            width: 100%;
-            object-fit: cover;
+            height: 800px;
         }
-        
 
         .link-intro {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-
             .intro-inner {
-                color: $white;
-                text-align: center;
-                position: absolute;
-                top: 190px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: left;
+                max-width: 1280px;
+                top: 0;
+                margin: 0 auto;
+                width: 100%;
+                height: 100%;
             }
 
-            .intro-tit1 {
+            .intro-tit2 {
                 @include p-bold;
+                font-size: 60px;
+                display: contents;
 
                 span {
                     display: block;
                 }
             }
-            .intro-tit2 {
+
+            .intro-tit1 {
                 display: none;
             }
 
             .intro-txt {
-                color: $gray-100;
-                font-size: 14px;
-                margin-top: 30px;
-            }
-
-            @media screen and (min-width: 1280px) {
-                .intro-inner {
-                    text-align: left;
-                    left: 80px;
-                    top: 240px;
-                }
-
-                .intro-tit2 {
-                    @include p-bold;
-                    font-size: 60px;
-                    display: contents;
-
-                    span {
-                        display: block;
-                    }
-                }
-                .intro-tit1 {
-                    display: none;
-                }
-                .intro-txt {
-                    margin-top: 40px;
-                    font-size: 22px;
-                }
+                margin-top: 40px;
+                font-size: 22px;
             }
         }
-    }
 
-    @media screen and (min-width: 1280px) {
-        .slide-intro2 {
-            img {
-                height: 800px;
-            }
-        }
     }
+}
 
 
 
