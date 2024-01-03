@@ -929,7 +929,6 @@ legend {
      object-position: 30% 100%;
 }
 .sec-biz .biz-list .biz-txt {
-  width: 170px;
   text-align: center;
   margin-top: 15px;
 }
@@ -959,11 +958,90 @@ legend {
     display: none;
   }
   .sec-biz .biz-content2 {
-    display: contents;
+    display: block;
+  }
+  .sec-biz .slide-biz {
+    margin-top: 70px;
+  }
+  .sec-biz .biz-list {
+    display: flex;
+    position: relative;
+    height: 430px;
+    width: 1060px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .sec-biz .biz-list .biz-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+  .sec-biz .biz-list .biz-txt p {
+    font-size: 34px;
+    font-weight: 700;
+    color: #fff;
+    padding: 8px 0;
+    margin: 0;
+  }
+  .sec-biz .biz-list .biz-txt span {
+    display: inline;
+  }
+  .sec-biz .biz-list .biz-txt .biz-goto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 13px;
+  }
+  .sec-biz .biz-list .biz-txt .biz-goto .biz-poppins {
+    text-align: center;
+    font-size: 34px;
+    color: #fff;
+  }
+  .sec-biz .biz-list .biz-txt .biz-goto .material-symbols-rounded {
+    font-size: 32px;
+    color: #fff;
+  }
+  .sec-biz .biz-list .biz-txt-sub {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #fff;
   }
   .sec-biz .biz-list img {
     height: 430px;
     width: 1060px;
+  }
+  .sec-biz .biz-list .biz-snack-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 85%;
+       object-position: 100% 85%;
+  }
+  .sec-biz .biz-list .biz-dryou-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 60%;
+       object-position: 100% 60%;
+  }
+  .sec-biz .biz-list .biz-marketo-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 60%;
+       object-position: 100% 60%;
+  }
+  .sec-biz .biz-list .biz-bio-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 63%;
+       object-position: 100% 63%;
   }
 }
 .sec-news {
