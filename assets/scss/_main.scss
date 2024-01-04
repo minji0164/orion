@@ -86,7 +86,7 @@
                 position: absolute;
             }
 
-            &:active {
+            &:hover {
                 background: $primary;
 
                 .essence-name {
@@ -614,7 +614,7 @@
             align-items: center;
         }
 
-        a {
+        .news-gomore {
             display: flex;
 
             .material-symbols-rounded {
@@ -623,9 +623,50 @@
         }
     }
 
-
     .w-full {
         width: 100%;
+    }
+
+    .news-gomore-d {
+        display: none;
+    }
+
+    @media screen and (min-width: 1280px) {
+        .news-tit-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            
+            .news-tit {
+                margin: 0;
+
+                .news-gomore {
+                    display: none;
+                }
+            }
+    
+            .news-gomore-d {
+                display: block;
+                text-align: right;
+                
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+
+                    span {
+                        color: $txtDefult;
+                        font-size: $font-size-18;
+                    }
+
+                    .material-symbols-rounded {
+                        font-size: $font-size-24;
+                    }
+                }
+                
+            }
+        }
     }
 
     // news-list---------------------------------------
@@ -704,12 +745,25 @@
             }
         }
     }
-}
 
-@media screen and (min-width: 1280px) {
-    .sec-news {
-        .news-tit {
-            margin: 0;
+    @media screen and (min-width: 1280px) {
+        .news-list {
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 0px;
+            margin-top: 70px;
+            gap: 0;
+
+            .list {
+                &:nth-child(3) {
+                    margin-right: 0px;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 238px;
+            }
         }
     }
 }
