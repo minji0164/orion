@@ -86,7 +86,7 @@
                 position: absolute;
             }
 
-            &:hover {
+            &:active {
                 background: $primary;
 
                 .essence-name {
@@ -381,6 +381,13 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin-top: 60px;
+
+        a {
+            &:nth-child(2),
+            &:nth-child(4) {
+                transform: translateY(200px);
+            }   
+        }
     }
 
     .biz-list {
@@ -390,10 +397,7 @@
         position: relative;
         margin-bottom: 100px;
 
-        &:nth-child(2),
-        &:nth-child(4) {
-            transform: translateY(200px);
-        }
+        
 
         // biz-list img
         img {
@@ -460,14 +464,26 @@
         }
 
         .slide-biz {
+            margin: 0 auto;
+            width: 80%;
+            overflow: visible;
             margin-top: 70px;
+        }
+
+        .swiper-slide {
+            width: 250px !important;
+        }
+
+        .swiper-slide-active {
+            width: 100% !important;
         }
 
         .biz-list {
             display: flex;
             position: relative;
-            height: 430px;
-            width: 1060px;
+            // height: 480px;
+            // width: 1280px;
+            width: 100%;
             margin: 0 auto;
             overflow: hidden;
 
@@ -522,8 +538,9 @@
             }
 
             img {
-                height: 430px;
-                width: 1060px;
+                width: 100%;
+                // height: 480px;
+                // width: 1060px;
             }
 
             .biz-snack-img {
@@ -544,6 +561,38 @@
             .biz-bio-img {
                 object-fit: cover;
                 object-position: 100% 63%;
+            }
+        }
+
+        .biz-name {
+            display: flex;
+            margin: 25px auto;
+            width: 1060px;
+            
+            li {
+                position: relative;
+                margin-left: 65px;
+            }
+
+            span {
+                position: absolute;
+                top: 5px;
+                right: -15px;
+                width: 12px;
+                height: 12px;
+                border-radius: 9999px;
+                background: $primary;
+            }
+
+            button {
+                color: $gray-200;
+                font-size: $font-size-24;
+                font-weight: $font-weight-700;
+                font-family: $font-family-pop;
+
+                &:hover {
+                    color: $txtDefult;
+                }
             }
         }
     }
@@ -653,6 +702,14 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .sec-news {
+        .news-tit {
+            margin: 0;
         }
     }
 }

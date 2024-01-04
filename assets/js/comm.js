@@ -9,4 +9,6 @@ var swiper = new Swiper(".slide-intro2", {
 // },
 });
 
-var swiper = new Swiper(".slide-biz", {});
+var swiper = new Swiper(".slide-biz", {
+  spaceBetween: 30,
+});

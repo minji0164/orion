@@ -585,6 +585,7 @@ legend {
   font-family: "poppins";
   font-size: 30px;
   line-height: 35px;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -666,10 +667,10 @@ legend {
   background-repeat: no-repeat;
   position: absolute;
 }
-.essence-list li a:hover {
+.essence-list li a:active {
   background: #E30512;
 }
-.essence-list li a:hover .essence-name {
+.essence-list li a:active .essence-name {
   color: #fff;
 }
 .essence-list li .essence-name {
@@ -889,15 +890,15 @@ legend {
   justify-content: space-between;
   margin-top: 60px;
 }
+.sec-biz .biz-content a:nth-child(2), .sec-biz .biz-content a:nth-child(4) {
+  transform: translateY(200px);
+}
 .sec-biz .biz-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   margin-bottom: 100px;
-}
-.sec-biz .biz-list:nth-child(2), .sec-biz .biz-list:nth-child(4) {
-  transform: translateY(200px);
 }
 .sec-biz .biz-list img {
   border-radius: 10px;
@@ -961,13 +962,21 @@ legend {
     display: block;
   }
   .sec-biz .slide-biz {
+    margin: 0 auto;
+    width: 80%;
+    overflow: visible;
     margin-top: 70px;
+  }
+  .sec-biz .swiper-slide {
+    width: 250px !important;
+  }
+  .sec-biz .swiper-slide-active {
+    width: 100% !important;
   }
   .sec-biz .biz-list {
     display: flex;
     position: relative;
-    height: 430px;
-    width: 1060px;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -1016,8 +1025,7 @@ legend {
     color: #fff;
   }
   .sec-biz .biz-list img {
-    height: 430px;
-    width: 1060px;
+    width: 100%;
   }
   .sec-biz .biz-list .biz-snack-img {
     -o-object-fit: cover;
@@ -1042,6 +1050,33 @@ legend {
        object-fit: cover;
     -o-object-position: 100% 63%;
        object-position: 100% 63%;
+  }
+  .sec-biz .biz-name {
+    display: flex;
+    margin: 25px auto;
+    width: 1060px;
+  }
+  .sec-biz .biz-name li {
+    position: relative;
+    margin-left: 65px;
+  }
+  .sec-biz .biz-name span {
+    position: absolute;
+    top: 5px;
+    right: -15px;
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+    background: #E30512;
+  }
+  .sec-biz .biz-name button {
+    color: #C3C3C5;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+  }
+  .sec-biz .biz-name button:hover {
+    color: #212126;
   }
 }
 .sec-news {
@@ -1129,6 +1164,11 @@ legend {
   text-overflow: ellipsis;
 }
 
+@media screen and (min-width: 1280px) {
+  .sec-news .news-tit {
+    margin: 0;
+  }
+}
 .sec-cooperation {
   position: relative;
 }
