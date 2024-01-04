@@ -748,13 +748,17 @@
 
     @media screen and (min-width: 1280px) {
         .news-list {
+            overflow: hidden;
             justify-content: space-between;
             align-items: center;
             margin-left: 0px;
             margin-top: 70px;
-            gap: 0;
+            gap: 20px;
 
             .list {
+                width: 100%;
+                height: 310px;
+
                 &:nth-child(3) {
                     margin-right: 0px;
                 }
@@ -763,6 +767,24 @@
             img {
                 width: 100%;
                 height: 238px;
+            }
+
+            .new-img1 {
+                object-position: 100% 10%;
+            }
+
+            .news-txt {
+                margin-top: 18px;
+                width: 413px;
+
+                .txt-primary {
+                    font-size: $font-size-16;
+                }
+
+                .txt-body {
+                    margin-top: 0;
+                    font-size: $font-size-18;
+                }
             }
         }
     }
@@ -782,13 +804,14 @@
         height: 100%;
         background-image: url(../../images/main/cooper-m.png);
         background-repeat: no-repeat;
+        background-position: 20% 20%;
     }
+    
 
     .cooper-tit {
         position: relative;
         @include p-bold;
         font-size: 30px;
-        line-height: 46px;
         color: $white;
 
         h2 {
@@ -828,6 +851,46 @@
             color: $white;
         }
     }
+
+    .cooper-tit-txt2 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .sec-cooperation {
+    
+        &::before {
+            background-image: url(../../images/main/cooper.png);
+        }
+
+        .cooper-tit {
+            font-size: $font-size-48;
+        }
+
+        .cooper-tit-txt {
+            display: none;
+        }
+
+        .cooper-tit-txt2 {
+            display: block;
+        }
+
+        .btn-area {
+            a {
+                width: 145px;
+                height: 45px;
+            }
+
+            .btn-area-txt {
+                font-size: $font-size-16;
+            }
+
+            .material-symbols-rounded {
+                font-size: $font-size-18;
+            }
+        }
+    }
 }
 
 // ----------------------------------------------------------------------------------7
@@ -836,7 +899,7 @@
     background: $gray-300;
 
     .inner {
-        padding: 80px 0;
+        margin: 80px 20px;
     }
 
     .menu-list {
@@ -883,6 +946,67 @@
         .sns-list {
             display: flex;
             gap: 16px;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #footer {
+        .inner {
+            position: relative;
+            margin: 80px auto;
+        }
+
+        h2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .menu-list {
+            display: flex;
+            gap: 24px;
+
+            li {
+                margin: 0;
+            }
+        }
+
+        .address-list {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            li {
+                font-size: $font-size-18;
+            }
+        }
+
+        .bottom {
+            margin-top: 60px;
+            font-size: $font-size-18;
+        }
+
+        .sns {
+            font-size: 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 0;
+
+            a {
+                
+            }
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
         }
     }
 }

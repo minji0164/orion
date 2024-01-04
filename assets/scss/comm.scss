@@ -276,6 +276,11 @@
     .sec-about .inner {
         padding: 105px 0;
     }
+    @media screen and (min-width: 1280px) {
+        .sec-cooperation .inner {
+            padding: 140px 0;
+        }
+    }
 
     .sec-gnb .inner {
         padding: 10px 0;
