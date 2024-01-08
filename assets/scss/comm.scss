@@ -273,17 +273,30 @@
         padding: 55px 0;
     }
 
-    .sec-about .inner {
-        padding: 105px 0;
-    }
     @media screen and (min-width: 1280px) {
         .sec-cooperation .inner {
             padding: 140px 0;
         }
     }
 
+    .sec-about .inner {
+        padding: 165px 0 105px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        .sec-about .inner {
+            padding: 280px 0 220px;
+        }
+    }
+    
     .sec-gnb .inner {
         padding: 10px 0;
+    }
+
+    @media screen and (min-width: 1280px) {
+        .sec-gnb .inner {
+            padding: 20px 0;
+        }
     }
 
     .sec-mgmt .inner,
@@ -291,7 +304,14 @@
         padding: 80px 0 0;
     }
 
-
+    @media screen and (min-width: 1280px) {
+            .sec-mgmt .inner {
+            padding: 140px 0 0;
+        }
+        .sec-mgmt2 .inner {
+            padding: 0;
+        }
+    }
 }
 
 .swiper {

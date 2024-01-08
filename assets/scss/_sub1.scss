@@ -1,4 +1,3 @@
-
 // sec-about-----------------------------------------------------
 .sec-about {
 
@@ -19,16 +18,47 @@
             margin-top: 35px;
         }
     }
-    
+
     span {
         display: block;
+    }
+
+    .text-wrap2 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .sec-about {
+        .text-wrap {
+            display: none;
+        }
+
+        .text-wrap2 {
+            display: block;
+
+            .about-txt1 {
+                text-align: center;
+                @include p-bold;
+                font-size: $font-size-48;
+
+                strong {
+                    color: $primary;
+                }
+            }
+
+            .about-txt2 {
+                @include p-regular;
+                margin-top: 60px;
+                font-size: $font-size-18;
+            }
+        }
     }
 }
 
 // sec-gnb-----------------------------------------------------
 .sec-gnb {
     box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.25);
-    position: relative;
     background: $white;
 
     .gnb-flex {
@@ -36,7 +66,7 @@
         justify-content: space-between;
         align-items: center;
         background: $white;
-        
+
         a {
             border-radius: 50px;
             padding: 8px 13px;
@@ -50,98 +80,215 @@
     }
 }
 
-// sec-img-----------------------------------------------------
-.contents {
-    .sec-img {
-        position: relative;
-        height: 215px;
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url(../../images/sub1/office-m.png);
-            background-repeat: no-repeat;
-            background-position: center;
+@media screen and (min-width: 1280px) {
+    .sec-gnb {
+        .gnb-flex {
+            justify-content: normal;
+
+            a {
+                padding: 15px 32px;
+                font-size: $font-size-18;
+            }
         }
     }
+}
+
+// sec-img-----------------------------------------------------
+.sec-img {
+    position: relative;
+    height: 215px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../../images/sub1/office-m.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    p {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .sec-img {
+        height: 360px;
+        width: 100%;
+
+        &::before {
+            background-image: url(../../images/sub1/office_waifu2x_photo_noise3_scale.png);
+            filter: brightness(0.7);
+        }
+
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            font-size: $font-size-18;
+            color: $white;
+        }
+    }
+}
 
 
 // // sec-mgmt-----------------------------------------------------
-    .sec-mgmt {
-        .mgmt-tit {
-            text-align: center;
+.sec-mgmt {
+    .mgmt-tit {
+        text-align: center;
 
-            .main-tit-preten {
-                font-size: $font-size-30;
-            }
+        .main-tit-preten {
+            font-size: $font-size-30;
+        }
 
-            .main-tit-sub {
-                margin-top: 10px;
-                span {
-                    display: block;
-                }
+        .main-tit-sub {
+            margin-top: 10px;
+
+            span {
+                display: block;
             }
         }
 
-        .cards {
-            margin-top: 60px;
+        .main-tit-sub2 {
+            display: none;
+        }
+    }
 
-            .cards-list {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
+    .cards {
+        margin-top: 60px;
+
+        .cards-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        li {
+            display: block;
+            position: relative;
+            width: 100%;
+            min-height: 165px;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 10px;
+
+                width: 100%;
+                height: 100%;
+
             }
 
-            li {
-                display: block;
-                position: relative;
-                width: 100%;
-                min-height: 165px;
+            .card1 {
+                object-fit: cover;
+                object-position: 100% 70%;
+            }
 
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    border-radius: 10px;
+            .card2 {
+                object-fit: cover;
+                object-position: 100% 35%;
+            }
+
+            .card3 {
+                object-fit: cover;
+                object-position: 100% 70%;
+            }
+
+            .card4 {
+                object-fit: cover;
+                object-position: 100% 20%;
+            }
+
+            strong {
+                position: absolute;
+                @include p-bold;
+                font-size: $font-size-14;
+                bottom: 15px;
+                left: 20px;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .sec-mgmt {
+        .mgmt-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            
+            .mgmt-tit {
+                text-align: left;
+                width: 570px;
     
-                    width: 100%;
-                    height: 100%;
-                    
+                .main-tit-preten {
+                    font-size: $font-size-48;
                 }
     
-                .card1 {
-                    object-fit: cover;
-                    object-position: 100% 70%;
-                }
-                .card2 {
-                    object-fit: cover;
-                    object-position: 100% 35%;
-                }
-                .card3 {
-                    object-fit: cover;
-                    object-position: 100% 70%;
-                }
-                .card4 {
-                    object-fit: cover;
-                    object-position: 100% 20%;
+                .main-tit-sub2 {
+                    display: block;
+                    margin-top: 30px;
+                    font-size: $font-size-18;
+                    color: $gray-300;
+    
+    
+                    span {
+                        display: block;
+                    }
                 }
     
-                strong {
-                    position: absolute;
-                    @include p-bold;
-                    font-size: $font-size-14;
-                    bottom: 15px;
-                    left: 20px;
-                    color: $white;
+                .main-tit-sub {
+                    display: none;
+                }
+            }
+
+            .cards {
+                margin: 0;
+                width: calc(100% - 570px);
+
+                .cards-list {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+
+                li {
+                    width: calc(50% - 10px);
+
+                    &:nth-child(1),
+                    &:nth-child(4) {
+                        height: 350px;
+                    }
+
+                    &:nth-child(4) {
+                        transform: translateY(-155px);
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        height: 195px;
+                    }
+
+                    strong {
+                        font-size: $font-size-16;
+                        bottom: 24px;
+                        left: 24px;
+                    }
                 }
             }
         }
     }
 }
+
 
 // sec-mgmt2----------------------------------------------------
 .sec-mgmt2 {
@@ -170,6 +317,10 @@
         img {
             width: 100%;
         }
+    }
+
+    .map2 {
+        display: none;
     }
 
     .contry {
@@ -203,18 +354,104 @@
     }
 }
 
+@media screen and (min-width: 1280px) {
+    .sec-mgmt2 {
+        .inner {
+            margin: 0 auto;
+        }
+
+        .mgmt2-tit {
+            margin: 0;
+
+            .main-tit-preten {
+                text-align: left;
+                font-size: $font-size-48;
+            }
+
+            .main-tit-sub-wrap {
+                margin-top: 30px;
+            }
+
+            .main-tit-sub {
+                margin: 0;
+
+                span {
+                    display: inline;
+                }
+            }
+        }
+
+        .map {
+            display: none;
+        }
+
+        .map2 {
+            display: block;
+            margin: 70px 0;
+        }
+
+        .contry {
+            margin: 0;
+
+            .contry-list {
+                flex-wrap: nowrap;
+                gap: 20px;
+
+                .list-tit {
+                    padding: 30px;
+                    height: 245px;
+                    font-size: $font-size-24;
+                }
+
+                .contry-list-txt {
+                    margin-top: 40px;
+                    font-size: $font-size-18;
+                }
+            }
+        }
+    }
+}
+
 // sec-mgmt3--------------------------------------------------
 .sec-mgmt3 {
     .mgmt3-tit {
         .main-tit-preten {
             text-align: center;
         }
+
         span {
             display: block;
         }
+    }
+
+    img {
+        margin-top: 40px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .sec-mgmt3 {
+        .mgmt3-box {
+            display: flex;
+        }
+
+        .mgmt3-tit {
+            width: 507px;
+
+            .main-tit-preten {
+                text-align: left;
+                font-size: $font-size-48;
+            }
+
+            .main-tit-sub {
+                margin-top: 30px;
+            }
+        }
+
         img {
-            margin-top: 40px;
-            width: 100%;
+            width: calc(100% - 507px);
+            margin: 0;
         }
     }
 }
