@@ -419,6 +419,11 @@
                 height: 100%;
             }
 
+            .intro-inner {
+                opacity: 0; /* 초기에는 숨겨진 상태로 설정 */
+                transition: opacity 0.5s ease-in-out; /* 투명도에 대한 전환 효과 설정 */
+              }
+
             .intro-tit2 {
                 @include p-bold;
                 font-size: 60px;
@@ -436,6 +441,14 @@
             .intro-txt {
                 margin-top: 40px;
                 font-size: 22px;
+            }
+        }
+
+        .swiper-slide-active {
+            .link-intro {
+                .intro-inner {
+                    opacity: 1;
+                }
             }
         }
 
