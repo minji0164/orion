@@ -16,14 +16,20 @@
     <meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
     <meta name="twitter:domain" content="사이트 명" />
     <link rel="icon" href="./favicon.png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,1,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,1,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./assets/css/comm.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.7.1/countUp.min.js"></script>
     <script defer src="./assets/js/comm.js"></script>
+
 </head>
 
 <body>
@@ -165,12 +171,12 @@
                             </div>
                         </div>
                         <div class="pagination">
+                            <div class="swiper-pagination"></div>
                             <button type="button">
                                 <span class="material-symbols-rounded">
                                     skip_previous
                                 </span>
                             </button>
-                            <div class="swiper-pagination"></div>
                             <button type="button">
                                 <span class="material-symbols-rounded">
                                     skip_next
@@ -251,7 +257,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="main-section sec-perf">
+            <section id="waypoint1" class="main-section sec-perf">
                 <div class="inner">
                     <div class="perf-tit-gomore">
                         <div class="perf-tit">
@@ -279,7 +285,7 @@
                             </div>
                             <div class="count">
                                 <p>
-                                    <em>30</em>
+                                    <em id="counter1">38</em>
                                     <span>억 개</span>
                                 </p>
                             </div>
@@ -295,7 +301,7 @@
                             </div>
                             <div class="count">
                                 <p>
-                                    <em>4,667</em>
+                                    <em id="counter2">4,667</em>
                                     <span>억 원</span>
                                 </p>
                             </div>
@@ -311,7 +317,7 @@
                             </div>
                             <div class="count">
                                 <p>
-                                    <em>11</em>
+                                    <em id="counter3">11</em>
                                     <span>개 사</span>
                                 </p>
                             </div>
@@ -322,13 +328,13 @@
                                     eco
                                 </span>
                                 <span class="perf-txt">
-                                    ESG 평가 2년 연속
+                                    연간 온실가스 감축량
                                 </span>
                             </div>
                             <div class="count">
                                 <p>
-                                    <em>A</em>
-                                    <span>등급</span>
+                                    <em id="counter4">475</em>
+                                    <span>톤</span>
                                 </p>
                             </div>
                         </li>
@@ -504,7 +510,7 @@
                         </div>
                         <ul class="biz-name">
                             <li>
-                                <span >
+                                <span>
                                     <!-- border-radius: 9999px; -->
                                 </span>
                                 <button type="button">
@@ -558,6 +564,50 @@
                         </div>
                     </div>
                     <div class="w-full">
+                        <!-- Swiper -->
+                        <div class="swiper news-slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img class="new-img1" src="./images/main/new1-d.png" alt="사진설명">
+                                        <div class="news-txt">
+                                            <span class="txt-primary">
+                                                Press
+                                            </span>
+                                            <p class="txt-body">
+                                                오리온, 크리스마스 한정판 ‘산타하우스 어드벤트 캘린더’, ‘루돌프 브라우니 만들기’ 출시
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img class="new-img2" src="./images/main/new2-d.png" alt="사진설명">
+                                        <div class="news-txt">
+                                            <span class="txt-primary">
+                                                Insta
+                                            </span>
+                                            <p class="txt-body">
+                                                [이벤트] 스윙칩 스윙로드 한정판
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img class="new-img3" src="./images/main/new3-d.png" alt="사진설명">
+                                        <div class="news-txt">
+                                            <span class="txt-primary">
+                                                Youtube
+                                            </span>
+                                            <p class="txt-body">
+                                                [채용START] 오리온 채용연계형 인턴십의 모든 것 | 오리온 신입사원 토크쇼
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <ul class="news-list">
                             <li class="list">
                                 <a href="#">

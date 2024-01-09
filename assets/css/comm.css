@@ -515,8 +515,18 @@ legend {
   height: 3px;
   border-radius: 0;
 }
+.swiper .pagination {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+}
 .swiper .swiper-pagination {
-  margin-bottom: 20px;
+  display: flex;
+}
+.swiper button {
+  z-index: 200;
 }
 .swiper .swiper-pagination-bullet-active {
   background: #fff;
@@ -552,6 +562,10 @@ legend {
   position: absolute;
   top: 190px;
 }
+.slide-intro2 .link-intro .intro-inner {
+  opacity: 0; /* 초기에는 숨겨진 상태로 설정 */
+  transition: opacity 0.8s ease-in-out; /* 투명도에 대한 전환 효과 설정 */
+}
 .slide-intro2 .link-intro .intro-tit1 {
   font-size: 40px;
   font-weight: 700;
@@ -566,6 +580,9 @@ legend {
   color: #F6F7F8;
   font-size: 14px;
   margin-top: 30px;
+}
+.slide-intro2 .swiper-slide-active .link-intro .intro-inner {
+  opacity: 1;
 }
 
 @media screen and (min-width: 1280px) {
@@ -583,10 +600,6 @@ legend {
     width: 100%;
     height: 100%;
   }
-  .slide-intro2 .link-intro .intro-inner {
-    opacity: 0; /* 초기에는 숨겨진 상태로 설정 */
-    transition: opacity 0.5s ease-in-out; /* 투명도에 대한 전환 효과 설정 */
-  }
   .slide-intro2 .link-intro .intro-tit2 {
     font-size: 40px;
     font-weight: 700;
@@ -602,9 +615,6 @@ legend {
   .slide-intro2 .link-intro .intro-txt {
     margin-top: 40px;
     font-size: 22px;
-  }
-  .slide-intro2 .swiper-slide-active .link-intro .intro-inner {
-    opacity: 1;
   }
 }
 .inner {
@@ -1116,7 +1126,6 @@ legend {
 .sec-news .news-tit {
   -moz-text-align-last: left;
        text-align-last: left;
-  margin: 0 20px;
 }
 .sec-news .news-tit .tit-and-more {
   display: flex;
@@ -1171,12 +1180,39 @@ legend {
 .sec-news .news-list::-webkit-scrollbar {
   display: none;
 }
+.sec-news .news-slide {
+  overflow-y: clip;
+  overflow-x: auto;
+  display: flex;
+  gap: 14px;
+  margin-top: 60px;
+}
+.sec-news .news-slide .news-txt {
+  width: 295px;
+  text-align: left;
+  margin-top: 5px;
+}
+.sec-news .news-slide .news-txt .txt-primary {
+  font-size: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #E30512;
+}
+.sec-news .news-slide .news-txt .txt-body {
+  font-size: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 3px;
+  color: #212126;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .sec-news .news-list {
   overflow-y: clip;
   overflow-x: auto;
   display: flex;
   gap: 14px;
-  margin-left: 20px;
   margin-top: 60px;
 }
 .sec-news .news-list .list:nth-child(3) {

@@ -631,7 +631,6 @@
     // news-tit------------------------------------
     .news-tit {
         text-align-last: left;
-        margin: 0 20px;
 
         .tit-and-more {
             display: flex;
@@ -707,6 +706,37 @@
         // 클래스 따로 선택해줘야 적용이 된다 ㅜ
     }
 
+    .news-slide {
+        overflow-y: clip;
+        overflow-x: auto;
+        display: flex;
+        gap: 14px;
+        margin-top: 60px;
+
+        .news-txt {
+            width: 295px;
+            text-align: left;
+            margin-top: 5px;
+
+            .txt-primary {
+                @include p-bold;
+                font-size: 14px;
+                color: $primary;
+            }
+
+            .txt-body {
+                @include p-bold;
+                font-size: 14px;
+                margin-top: 3px;
+                color: $txtDefult;
+
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
     .news-list {
         // scrollbar-width: none;
         // -ms-overflow-style: none;
@@ -714,7 +744,6 @@
         overflow-x: auto;
         display: flex;
         gap: 14px;
-        margin-left: 20px;
         margin-top: 60px;
 
         .list {
