@@ -33,6 +33,11 @@
     z-index: 1000;
 }
 
+.blur-background {
+    backdrop-filter: blur(5px); /* 블러 처리 설정 */
+    transition: backdrop-filter 0.3s ease; /* 블러 효과에 대한 트랜지션 설정 */
+  }
+
 @media screen and (min-width: 1280px) {
     #header {
         max-width: 1280px;

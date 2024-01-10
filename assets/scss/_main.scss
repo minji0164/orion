@@ -628,6 +628,10 @@
 .sec-news {
     background: $gray-100;
 
+    .news-list {
+        display: none;
+    }
+
     // news-tit------------------------------------
     .news-tit {
         text-align-last: left;
@@ -707,52 +711,10 @@
     }
 
     .news-slide {
-        overflow-y: clip;
-        overflow-x: auto;
         display: flex;
         gap: 14px;
         margin-top: 60px;
 
-        .news-txt {
-            width: 295px;
-            text-align: left;
-            margin-top: 5px;
-
-            .txt-primary {
-                @include p-bold;
-                font-size: 14px;
-                color: $primary;
-            }
-
-            .txt-body {
-                @include p-bold;
-                font-size: 14px;
-                margin-top: 3px;
-                color: $txtDefult;
-
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        }
-    }
-
-    .news-list {
-        // scrollbar-width: none;
-        // -ms-overflow-style: none;
-        overflow-y: clip;
-        overflow-x: auto;
-        display: flex;
-        gap: 14px;
-        margin-top: 60px;
-
-        .list {
-            &:nth-child(3) {
-                margin-right: 20px;
-            }
-        }
-
-        // news-list img---------------------
         img {
             display: block;
             border-radius: 10px;
@@ -775,7 +737,6 @@
             object-position: 50% 100%;
         }
 
-        // news-txt----------------------------
         .news-txt {
             width: 295px;
             text-align: left;
@@ -801,7 +762,14 @@
     }
 
     @media screen and (min-width: 1280px) {
+        .news-slide {
+            display: none;
+        }
+
         .news-list {
+            overflow-y: clip;
+            overflow-x: auto;
+            display: flex;
             overflow: visible;
             justify-content: space-between;
             align-items: center;
@@ -819,6 +787,8 @@
             }
 
             img {
+                display: block;
+                border-radius: 10px;
                 width: 100%;
                 height: 238px;
                 transition: 0.3s;
@@ -830,20 +800,41 @@
             }
 
             .new-img1 {
+                object-fit: cover;
                 object-position: 100% 10%;
             }
 
+            .new-img2 {
+                object-fit: cover;
+                object-position: 50% 50%;
+            }
+    
+            .new-img3 {
+                object-fit: cover;
+                object-position: 50% 100%;
+            }
+
             .news-txt {
+                width: 295px;
+            text-align: left;
                 margin-top: 18px;
                 width: 413px;
 
                 .txt-primary {
+                    @include p-bold;
                     font-size: $font-size-16;
+                    color: $primary;
                 }
 
                 .txt-body {
+                    @include p-bold;
                     margin-top: 0;
                     font-size: $font-size-18;
+                    color: $txtDefult;
+
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
         }

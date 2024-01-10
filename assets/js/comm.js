@@ -1,3 +1,4 @@
+//slide-visure--------------------------------------------------------------------------
 var swiper = new Swiper(".slide-intro2", {
   loop: true,
   pagination: {
@@ -9,14 +10,17 @@ var swiper = new Swiper(".slide-intro2", {
 },
 });
 
+//slide-biz--------------------------------------------------------------------------
 var swiper = new Swiper(".slide-biz", {
   spaceBetween: 30,
 });
 
+//aos--------------------------------------------------------------------------
 AOS.init({
   duration: 1200,
 })
 
+//count--------------------------------------------------------------------------
 var counter1 = new CountUp("counter1", 0, 38, 0, 5, {  
   useEasing: true,
   useGrouping: true,
@@ -38,8 +42,6 @@ var counter4 = new CountUp("counter4", 0, 475, 0, 5, {  
   useGrouping: true,
 });
 
-
-
 var waypoint1 = new Waypoint({
 element: document.getElementById('waypoint1'),
 handler: function(direction) {
@@ -53,7 +55,6 @@ handler: function(direction) {
 },
 offset: '50%'
 });
-
 
 var waypoint1 = new Waypoint({
 element: document.getElementById('waypoint1'),
@@ -69,7 +70,6 @@ handler: function(direction) {
 offset: '50%'
 });
 
-
 var waypoint1 = new Waypoint({
 element: document.getElementById('waypoint1'),
 handler: function(direction) {
@@ -83,7 +83,6 @@ handler: function(direction) {
 },
 offset: '50%'
 });
-
 
 var waypoint1 = new Waypoint({
 element: document.getElementById('waypoint1'),
@@ -99,4 +98,37 @@ handler: function(direction) {
 offset: '50%'
 });
 
-var swiper = new Swiper(".news-slide", {});
+//newsroom--------------------------------------------------------------------------
+var swiper = new Swiper(".news-slide", {
+  slidesPerView: 1.25,
+});
+
+//header--------------------------------------------------------------------------
+var header = document.getElementById('header');
+var materialSymbolsOutlined = document.querySelector('.material-symbols-outlined');
+var bars = document.querySelectorAll('.bar')
+
+header.style.transition = 'background-color 0.3s ease';
+
+// 스크롤 이벤트 리스너 등록
+window.addEventListener('scroll', function() {
+  // 현재 스크롤 위치 가져오기
+  var scrollPosition = window.scrollY;
+
+  // 스크롤 위치에 따라 헤더의 배경 색상 변경
+  if (scrollPosition > 640) {
+    header.style.backgroundColor = 'rgba(255, 255, 255, 0.8)'; // 스크롤 위치가 0보다 크면 배경색 변경
+    header.classList.add('blur-background'); //블러 먹이기
+    materialSymbolsOutlined.style.color = '#57575b';
+    bars.forEach(function(bar) {
+      bar.style.backgroundColor = '#57575b';
+    });
+  } else {
+    header.style.backgroundColor = 'transparent'; // 스크롤 위치가 0이면 배경 다시 투명으로
+    header.classList.remove('blur-background');
+    materialSymbolsOutlined.style.color = '#fff';
+    bars.forEach(function(bar) {
+      bar.style.backgroundColor = '#fff';
+    });
+  }
+});
