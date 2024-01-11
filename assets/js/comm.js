@@ -107,8 +107,9 @@ var swiper = new Swiper(".news-slide", {
 var header = document.getElementById('header');
 var materialSymbolsOutlined = document.querySelector('.material-symbols-outlined');
 var bars = document.querySelectorAll('.bar')
+var navLinks = document.querySelectorAll('#gnb a');
 
-header.style.transition = 'background-color 0.3s ease';
+header.style.transition = 'background-color 0.5s ease';
 
 // 스크롤 이벤트 리스너 등록
 window.addEventListener('scroll', function() {
@@ -123,6 +124,9 @@ window.addEventListener('scroll', function() {
     bars.forEach(function(bar) {
       bar.style.backgroundColor = '#57575b';
     });
+    navLinks.forEach(function(link) {
+      link.style.color = '#212126';
+    });
   } else {
     header.style.backgroundColor = 'transparent'; // 스크롤 위치가 0이면 배경 다시 투명으로
     header.classList.remove('blur-background');
@@ -130,5 +134,19 @@ window.addEventListener('scroll', function() {
     bars.forEach(function(bar) {
       bar.style.backgroundColor = '#fff';
     });
+    navLinks.forEach(function(link) {
+      link.style.color = '#fff';
+    });
   }
+});
+
+navLinks.forEach(function(link) {
+  link.addEventListener('mouseover', function() {
+    link.style.color = '#e30512'; // 마우스 오버 시의 원하는 색상으로 변경
+  });
+
+  link.addEventListener('mouseout', function() {
+    // 마우스 아웃 시 스크롤 상태에 따라 원래 색상으로 변경
+    link.style.color = window.scrollY > 640 ? '#57575b' : '#fff';
+  });
 });

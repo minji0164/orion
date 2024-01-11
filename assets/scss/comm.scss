@@ -33,6 +33,12 @@
     z-index: 1000;
 }
 
+@media screen and (min-width: 1280px) {
+    #header {
+        height: 70px;
+    }
+}
+
 .blur-background {
     backdrop-filter: blur(5px); /* 블러 처리 설정 */
     transition: backdrop-filter 0.3s ease; /* 블러 효과에 대한 트랜지션 설정 */
@@ -40,7 +46,7 @@
 
 @media screen and (min-width: 1280px) {
     #header {
-        max-width: 1280px;
+        max-width: none;
         /* 기존의 max-width 제거 */
     }
 }
@@ -186,6 +192,10 @@
             width: 100%;
             height: 100%;
         }
+
+        .depth2 {
+            display: none;
+        }
     }
 }
 
@@ -206,7 +216,7 @@
         }
 
         #gnb {
-            height: 60px;
+            height: 70px;
             opacity: 1;
             left: 0;
             transition: none;
@@ -220,7 +230,7 @@
             padding: 0;
             margin: 0;
             width: 100%;
-            height: 60px;
+            height: 70px;
 
             li {
                 padding: 20px 30px;
@@ -231,8 +241,19 @@
             }
 
             a {
-                font-size: $font-size-16;
+                font-size: $font-size-18;
                 color: $white;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            .depth2 {
+                display: block;
+
+                height: 0;
+                overflow: hidden;
             }
         }
     }
