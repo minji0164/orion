@@ -53,7 +53,7 @@
 
 #header {
     .inner {
-        height: 60px;
+        height: 70px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -78,7 +78,7 @@
     .util {
         .lang-ico {
             padding: 0 15px 0 0;
-            height: 60px;
+            height: 70px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -179,8 +179,6 @@
         margin: 0 20px;
         width: 100%;
         height: 100%;
-
-
         font-size: $font-size-18;
 
         li {
@@ -216,7 +214,7 @@
         }
 
         #gnb {
-            height: 70px;
+            height: 350px;
             opacity: 1;
             left: 0;
             transition: none;
@@ -232,11 +230,27 @@
             width: 100%;
             height: 70px;
 
+            &:hover {
+                background: $white;
+
+                .depth2 {
+                    height: auto;
+                    display: block;
+                } 
+            }
+
             li {
                 padding: 20px 30px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
 
                 &:hover {
-                    // 헤더 그거 메뉴 넣기
+                    .depth2 {
+                        height: auto;
+                    }
                 }
             }
 
@@ -250,10 +264,26 @@
             }
 
             .depth2 {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                padding-top: 15px;
+                display: none;
+                z-index: 1;
 
-                height: 0;
-                overflow: hidden;
+                li {
+                    padding: 0 0 12px 30px;
+                    width: 100%;
+
+                    a {
+                        font-size: $font-size-16;
+                    }
+                }
             }
         }
     }

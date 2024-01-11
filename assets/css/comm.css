@@ -316,7 +316,7 @@ legend {
   }
 }
 #header .inner {
-  height: 60px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -337,7 +337,7 @@ legend {
 }
 .col-right .util .lang-ico {
   padding: 0 15px 0 0;
-  height: 60px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -437,7 +437,7 @@ legend {
     display: none;
   }
   .col-right #gnb {
-    height: 70px;
+    height: 350px;
     opacity: 1;
     left: 0;
     transition: none;
@@ -452,8 +452,22 @@ legend {
     width: 100%;
     height: 70px;
   }
+  .col-right .gnb-list:hover {
+    background: #fff;
+  }
+  .col-right .gnb-list:hover .depth2 {
+    height: auto;
+    display: block;
+  }
   .col-right .gnb-list li {
     padding: 20px 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .col-right .gnb-list li:hover .depth2 {
+    height: auto;
   }
   .col-right .gnb-list a {
     font-size: 18px;
@@ -463,9 +477,24 @@ legend {
     color: #E30512;
   }
   .col-right .gnb-list .depth2 {
-    display: block;
-    height: 0;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 15px;
+    display: none;
+    z-index: 1;
+  }
+  .col-right .gnb-list .depth2 li {
+    padding: 0 0 12px 30px;
+    width: 100%;
+  }
+  .col-right .gnb-list .depth2 li a {
+    font-size: 16px;
   }
 }
 #main .inner {
