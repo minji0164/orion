@@ -152,9 +152,12 @@ navLinks.forEach(function(link) {
 });
 
 //---------------------------------------------------------------
-const gnb = document.querySelector("#gnb");
-gnb.addEventListener('onmouseover', function() {
-  gnb.add("active");
+const gnb = document.getElementById("gnb");
 
-  
+gnb.addEventListener('mouseover', function() {
+  gnb.classList.add("active");
+});
+
+gnb.addEventListener('mouseout', function() {
+  gnb.classList.remove("active");
 });

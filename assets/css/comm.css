@@ -444,7 +444,17 @@ legend {
     background: none;
   }
   .col-right #gnb.active .gnb-bg {
+    height: 350px; /* active 상태일 때 높이를 350px로 변경 */
+  }
+  .col-right #gnb .gnb-bg {
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0; /* 초기에는 높이를 0으로 설정 */
+    background: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+    transition: height 0.4s ease; /* 높이에 대한 트랜지션 속성 추가 */
   }
   .col-right .gnb-list {
     display: flex;
@@ -470,6 +480,7 @@ legend {
     color: #E30512;
   }
   .col-right .gnb-list:hover .depth2 {
+    transition: 0.4s ease;
     display: block;
   }
   .col-right .gnb-list .depth2 {
