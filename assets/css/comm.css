@@ -316,7 +316,7 @@ legend {
   }
 }
 #header .inner {
-  height: 70px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -337,7 +337,7 @@ legend {
 }
 .col-right .util .lang-ico {
   padding: 0 15px 0 0;
-  height: 70px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -437,63 +437,51 @@ legend {
     display: none;
   }
   .col-right #gnb {
-    height: 350px;
+    height: 70px;
     opacity: 1;
     left: 0;
     transition: none;
     background: none;
   }
+  .col-right #gnb.active .gnb-bg {
+    position: absolute;
+  }
   .col-right .gnb-list {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 0;
     margin: 0;
     width: 100%;
     height: 70px;
   }
-  .col-right .gnb-list:hover {
-    background: #fff;
-  }
-  .col-right .gnb-list:hover .depth2 {
-    height: auto;
-    display: block;
-  }
-  .col-right .gnb-list li {
-    padding: 20px 30px;
+  .col-right .gnb-list > li {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
   }
-  .col-right .gnb-list li:hover .depth2 {
-    height: auto;
-  }
-  .col-right .gnb-list a {
+  .col-right .gnb-list > li > a {
+    display: block;
+    height: 70px;
+    padding: 20px 30px;
     font-size: 18px;
     color: #fff;
   }
-  .col-right .gnb-list a:hover {
+  .col-right .gnb-list > li > a:hover {
     color: #E30512;
   }
+  .col-right .gnb-list:hover .depth2 {
+    display: block;
+  }
   .col-right .gnb-list .depth2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     position: absolute;
-    top: 100%;
+    top: 70px;
     left: 0;
-    height: 100%;
-    width: 100%;
-    padding-top: 15px;
-    display: none;
-    z-index: 1;
+    right: 0;
   }
   .col-right .gnb-list .depth2 li {
-    padding: 0 0 12px 30px;
-    width: 100%;
+    padding: 0;
   }
-  .col-right .gnb-list .depth2 li a {
+  .col-right .gnb-list .depth2 a {
     font-size: 16px;
   }
 }

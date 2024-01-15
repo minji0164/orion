@@ -221,35 +221,66 @@
             left: 0;
             transition: none;
             background: none;
+
+            &.active {
+                .gnb-bg {
+                    position: absolute;
+                }
+            }
+        }
+
+        .gnb-bg {
+            
         }
 
         .gnb-list {
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
             padding: 0;
             margin: 0;
             width: 100%;
             height: 70px;
 
-            li {
-                padding: 20px 30px;
+            > li {
+                position: relative;
+
+                > a {
+                    display: block;
+                    height: 70px;
+                    padding: 20px 30px;
+                    font-size: $font-size-18;
+                    color: $white;
+    
+                    &:hover {
+                        color: $primary;
+                    }
+                }
             }
 
-            a {
-                font-size: $font-size-18;
-                color: $white;
+            
 
-                &:hover {
-                    color: $primary;
+            &:hover {
+                .depth2 {
+                    display: block;
                 }
             }
 
             .depth2 {
-                display: block;
 
-                height: 0;
-                overflow: hidden;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+
+                li {
+                    padding: 0;
+                }
+
+                a {
+                    font-size: $font-size-16;
+                }
             }
         }
     }

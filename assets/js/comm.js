@@ -150,3 +150,11 @@ navLinks.forEach(function(link) {
     link.style.color = window.scrollY > 640 ? '#57575b' : '#fff';
   });
 });
+
+//---------------------------------------------------------------
+const gnb = document.querySelector("#gnb");
+gnb.addEventListener('onmouseover', function() {
+  gnb.add("active");
+
+  
+});
