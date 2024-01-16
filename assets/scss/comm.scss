@@ -227,7 +227,7 @@
                     height: 350px; /* active 상태일 때 높이를 350px로 변경 */
                 }
                 
-                a {
+                .depth1 {
                     color: $txtDefult;
                 }
 
@@ -292,6 +292,7 @@
                 }
 
                 a {
+                    color: $txtDefult;
                     font-size: $font-size-16;
                 }
             }

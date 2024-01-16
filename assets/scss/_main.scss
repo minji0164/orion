@@ -433,12 +433,12 @@
 
         .biz-snack-img {
             object-fit: cover;
-            object-position: 50% 100%;
+            object-position: 55% 100%;
         }
 
         .biz-dryou-img {
             object-fit: cover;
-            object-position: 68% 100%;
+            object-position: 67% 100%;
         }
 
         .biz-marketo-img {
@@ -490,17 +490,9 @@
 
         .slide-biz {
             margin: 0 auto;
-            width: 80%;
+            // width: 100%;
             overflow: visible;
             margin-top: 70px;
-        }
-
-        .swiper-slide {
-            width: 250px !important;
-        }
-
-        .swiper-slide-active {
-            width: 100% !important;
         }
 
         .biz-list {
@@ -563,6 +555,7 @@
             }
 
             img {
+                height: 528px;
                 width: 100%;
                 // height: 480px;
                 // width: 1060px;
@@ -591,7 +584,7 @@
 
         .biz-name {
             display: flex;
-            margin: 25px auto;
+            margin: 30px 0;
             width: 1060px;
             
             li {

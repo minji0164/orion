@@ -12,7 +12,7 @@ var swiper = new Swiper(".slide-intro2", {
 
 //slide-biz--------------------------------------------------------------------------
 var swiper = new Swiper(".slide-biz", {
-  spaceBetween: 30,
+  spaceBetween: 40,
 });
 
 //aos--------------------------------------------------------------------------
@@ -107,7 +107,7 @@ var swiper = new Swiper(".news-slide", {
 var header = document.getElementById('header');
 var materialSymbolsOutlined = document.querySelector('.material-symbols-outlined');
 var bars = document.querySelectorAll('.bar')
-var navLinks = document.querySelectorAll('#gnb a');
+var navLinks = document.querySelectorAll('.depth1');
 
 header.style.transition = 'background-color 0.5s ease';
 
@@ -134,23 +134,11 @@ window.addEventListener('scroll', function() {
     bars.forEach(function(bar) {
       bar.style.backgroundColor = '#fff';
     });
-    // navLinks.forEach(function(link) {
-    //   link.style.color = '#fff';
-    // });
+    navLinks.forEach(function(link) {
+      link.style.color = '#fff';
+    });
   }
 });
-
-navLinks.forEach(function(link) {
-  link.addEventListener('mouseover', function() {
-    link.style.color = '#e30512'; // 마우스 오버 시의 원하는 색상으로 변경
-  });
-
-  link.addEventListener('mouseout', function() {
-    // 마우스 아웃 시 스크롤 상태에 따라 원래 색상으로 변경
-    link.style.color = window.scrollY > 640 ? '#212126' : '#212126';
-  });
-});
-
 //---------------------------------------------------------------
 const gnb = document.getElementById("gnb");
 
@@ -161,5 +149,7 @@ gnb.addEventListener('mouseover', function() {
 gnb.addEventListener('mouseout', function() {
   gnb.classList.remove("active");
 });
+
+
 
 
