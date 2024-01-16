@@ -134,9 +134,9 @@ window.addEventListener('scroll', function() {
     bars.forEach(function(bar) {
       bar.style.backgroundColor = '#fff';
     });
-    navLinks.forEach(function(link) {
-      link.style.color = '#fff';
-    });
+    // navLinks.forEach(function(link) {
+    //   link.style.color = '#fff';
+    // });
   }
 });
 
@@ -147,7 +147,7 @@ navLinks.forEach(function(link) {
 
   link.addEventListener('mouseout', function() {
     // 마우스 아웃 시 스크롤 상태에 따라 원래 색상으로 변경
-    link.style.color = window.scrollY > 640 ? '#57575b' : '#fff';
+    link.style.color = window.scrollY > 640 ? '#212126' : '#212126';
   });
 });
 
@@ -161,3 +161,5 @@ gnb.addEventListener('mouseover', function() {
 gnb.addEventListener('mouseout', function() {
   gnb.classList.remove("active");
 });
+
+

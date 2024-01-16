@@ -226,6 +226,14 @@
                 .gnb-bg {
                     height: 350px; /* active 상태일 때 높이를 350px로 변경 */
                 }
+                
+                a {
+                    color: $txtDefult;
+                }
+
+                .depth2 {
+                    display: block;
+                }
 
                 
             }
@@ -268,15 +276,6 @@
                 }
             }
 
-            
-
-            &:hover {
-                .depth2 {
-                    transition: 0.4s ease;
-                    display: block;
-                }
-            }
-
             .depth2 {
 
                 position: absolute;
@@ -285,7 +284,11 @@
                 right: 0;
 
                 li {
-                    padding: 0;
+                    padding: 10px 0 0 0;
+
+                    &:nth-child(1) {
+                        padding: 25px 0 0 0;
+                    }
                 }
 
                 a {

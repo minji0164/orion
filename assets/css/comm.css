@@ -446,6 +446,12 @@ legend {
   .col-right #gnb.active .gnb-bg {
     height: 350px; /* active 상태일 때 높이를 350px로 변경 */
   }
+  .col-right #gnb.active a {
+    color: #212126;
+  }
+  .col-right #gnb.active .depth2 {
+    display: block;
+  }
   .col-right #gnb .gnb-bg {
     position: absolute;
     top: 0;
@@ -479,10 +485,6 @@ legend {
   .col-right .gnb-list > li > a:hover {
     color: #E30512;
   }
-  .col-right .gnb-list:hover .depth2 {
-    transition: 0.4s ease;
-    display: block;
-  }
   .col-right .gnb-list .depth2 {
     position: absolute;
     top: 70px;
@@ -490,7 +492,10 @@ legend {
     right: 0;
   }
   .col-right .gnb-list .depth2 li {
-    padding: 0;
+    padding: 10px 0 0 0;
+  }
+  .col-right .gnb-list .depth2 li:nth-child(1) {
+    padding: 25px 0 0 0;
   }
   .col-right .gnb-list .depth2 a {
     font-size: 16px;
