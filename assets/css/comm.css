@@ -279,6 +279,14 @@ legend {
   max-width: 430px;
   margin: 0 auto;
 }
+.wrap ::-moz-selection {
+  background-color: #E30512;
+  color: #fff;
+}
+.wrap ::selection {
+  background-color: #E30512;
+  color: #fff;
+}
 
 @media screen and (min-width: 1280px) {
   .wrap {
@@ -294,6 +302,12 @@ legend {
   width: 100%;
   height: 60px;
   z-index: 1000;
+  transition: -webkit-backdrop-filter 0.5s ease;
+  transition: backdrop-filter 0.5s ease;
+  transition: backdrop-filter 0.5s ease, -webkit-backdrop-filter 0.5s ease; /* 블러 효과에 대한 전환 효과 */
+  background-color: rgba(255, 255, 255, 0.1); /* 초기 배경 투명 */
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 
 @media screen and (min-width: 1280px) {
@@ -302,8 +316,8 @@ legend {
   }
 }
 .blur-background {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px); /* 블러 처리 설정 */
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px); /* 블러 처리 설정 */
   transition: -webkit-backdrop-filter 0.3s ease;
   transition: backdrop-filter 0.3s ease;
   transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease; /* 블러 효과에 대한 트랜지션 설정 */
@@ -316,7 +330,7 @@ legend {
   }
 }
 #header .inner {
-  height: 60px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -331,9 +345,14 @@ legend {
 }
 
 .col-right {
+  z-index: 1000;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.col-right .util {
+  z-index: 1000;
 }
 .col-right .util .lang-ico {
   padding: 0 15px 0 0;
@@ -409,6 +428,9 @@ legend {
   height: 640px;
   opacity: 0;
 }
+.col-right .active {
+  transition: all 0.3s;
+}
 .col-right .gnb-list {
   padding: 80px 0;
   margin: 0 20px;
@@ -420,6 +442,7 @@ legend {
   padding: 20px 0;
 }
 .col-right .gnb-list a {
+  transition: all 0.3s;
   display: block;
   width: 100%;
   height: 100%;
@@ -443,6 +466,9 @@ legend {
     transition: none;
     background: none;
   }
+  .col-right #gnb.active {
+    transition: all 0.3s;
+  }
   .col-right #gnb.active .gnb-bg {
     height: 350px; /* active 상태일 때 높이를 350px로 변경 */
   }
@@ -460,7 +486,7 @@ legend {
     height: 0; /* 초기에는 높이를 0으로 설정 */
     background: #fff;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
-    transition: height 0.4s ease; /* 높이에 대한 트랜지션 속성 추가 */
+    transition: all 0.4s ease; /* 높이에 대한 트랜지션 속성 추가 */
   }
   .col-right .gnb-list {
     display: flex;
@@ -481,6 +507,7 @@ legend {
     padding: 20px 30px;
     font-size: 18px;
     color: #fff;
+    transition: all 0.3s;
   }
   .col-right .gnb-list > li > a:hover {
     color: #E30512;
@@ -490,6 +517,7 @@ legend {
     top: 70px;
     left: 0;
     right: 0;
+    transition: all 0.3s;
   }
   .col-right .gnb-list .depth2 li {
     padding: 10px 0 0 0;
@@ -575,10 +603,14 @@ legend {
 }
 .swiper .pagination {
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 0;
+  transform: translate(-50%);
   display: flex;
-  width: 100%;
+  width: 1280px;
+  height: 70px;
+  margin: 0 auto;
+  z-index: 1000;
 }
 .swiper .swiper-pagination {
   display: flex;
@@ -598,9 +630,11 @@ legend {
     height: 3px;
   }
   .swiper .swiper-pagination {
+    position: absolute;
+    top: 50%;
+    left: 0;
     max-width: 1280px;
     margin: 0 auto; /* 가운데 정렬을 위한 margin 추가 */
-    text-align: left;
   }
 }
 .slide-intro2 img {
@@ -675,8 +709,43 @@ legend {
     font-size: 22px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hd-sub1 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.5) !important; /* 초기 배경 투명 */
+  }
+  .hd-sub1 .depth2 {
+    display: none;
+    transition: display 0.3s ease !important;
+  }
+  .hd-sub1 .gnb {
+    transition: height 0.3s, box-shadow 0.3s, background-color 0.3s !important;
+  }
+  .hd-sub1:hover .gnb {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+    height: 350px !important;
+    background: #fff !important;
+  }
+  .hd-sub1:hover .depth2 {
+    display: block;
+  }
+  .hd-sub1 .depth1 {
+    color: #212126 !important;
+  }
+  .hd-sub1 .material-symbols-outlined {
+    color: #212126 !important;
+  }
+  .hd-sub1 .bar {
+    background: #212126 !important;
+  }
+}
 .inner {
   margin: 0 20px;
+}
+
+.essence-tit {
+  position: relative;
+  width: 50%;
 }
 
 .main-tit {
@@ -697,6 +766,12 @@ legend {
   display: block;
 }
 
+@media screen and (max-width: 1280px) {
+  .essence-tit {
+    position: relative;
+    width: 100%;
+  }
+}
 @media screen and (min-width: 1280px) {
   .inner {
     max-width: 1280px;
@@ -949,6 +1024,10 @@ legend {
 .perf-gomore {
   display: none;
 }
+.perf-gomore:hover .icon {
+  transition: all 0.3s;
+  color: #E30512;
+}
 
 @media screen and (min-width: 1280px) {
   .perf-gomore {
@@ -980,6 +1059,21 @@ legend {
 }
 .sec-biz .biz-content2 {
   display: none;
+}
+.sec-biz .biz-content2 .biz-list {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.sec-biz .biz-content2 .biz-list:hover img {
+  transform: scale(1.1); /* 이미지를 1.1배로 확대합니다. */
+  transition: transform 0.3s ease;
+}
+.sec-biz .biz-content2 img {
+  filter: brightness(75%);
+  transition: filter 0.3s ease;
+}
+.sec-biz .biz-content2 .swiper-slide {
+  margin-right: 40px;
 }
 .sec-biz .biz-content {
   display: flex;
@@ -1168,9 +1262,6 @@ legend {
     font-weight: 700;
     font-family: "Poppins", sans-serif;
   }
-  .sec-biz .biz-name button:hover {
-    color: #212126;
-  }
 }
 .sec-news {
   background: #F6F7F8;
@@ -1215,6 +1306,9 @@ legend {
     display: block;
     text-align: right;
   }
+  .sec-news .news-tit-wrap .news-gomore-d:hover .icon {
+    color: #E30512;
+  }
   .sec-news .news-tit-wrap .news-gomore-d a {
     display: flex;
     align-items: center;
@@ -1227,6 +1321,7 @@ legend {
   }
   .sec-news .news-tit-wrap .news-gomore-d a .material-symbols-rounded {
     font-size: 24px;
+    transition: all 0.3s;
   }
 }
 .sec-news .news-list {
@@ -1393,6 +1488,10 @@ legend {
 .sec-cooperation .btn-area {
   position: relative;
   margin-top: 60px;
+  transition: all 0.3s;
+}
+.sec-cooperation .btn-area:hover {
+  transform: translateY(-5px);
 }
 .sec-cooperation .btn-area a {
   gap: 6px;
