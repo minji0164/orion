@@ -612,6 +612,15 @@ legend {
   margin: 0 auto;
   z-index: 1000;
 }
+@media screen and (max-width: 1280px) {
+  .swiper .pagination {
+    width: 430px;
+    bottom: 10px;
+  }
+  .swiper .swiper-pagination {
+    justify-content: center;
+  }
+}
 .swiper .swiper-pagination {
   display: flex;
 }
@@ -736,6 +745,17 @@ legend {
     color: #212126 !important;
   }
   .hd-sub1 .bar {
+    background: #212126 !important;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .hd-sub1 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .material-symbols-outlined {
+    color: #212126 !important;
+  }
+  .bar {
     background: #212126 !important;
   }
 }

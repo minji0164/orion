@@ -414,6 +414,17 @@
     z-index: 1000;
   }
 
+  @media screen and (max-width: 1280px) {
+    .pagination {
+      width: 430px;
+      bottom: 10px;
+    }
+
+    .swiper-pagination {
+      justify-content: center;
+    }
+  }
+
   .swiper-pagination {
     // margin-bottom: 20px;
     display: flex;
@@ -579,6 +590,18 @@
     .bar {
       background: $txtDefult !important;
     }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .hd-sub1 {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  }
+  .material-symbols-outlined {
+    color: $txtDefult !important;
+  }
+
+  .bar {
+    background: $txtDefult !important;
   }
 }
 
