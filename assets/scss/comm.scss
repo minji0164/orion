@@ -595,11 +595,11 @@
 @media screen and (max-width: 1280px) {
   .hd-sub1 {
     border-bottom: 1px solid rgb(0, 0, 0, 0.1);
-    .material-symbols-outlined {
+    .lang {
       color: $txtDefult !important;
     }
 
-    .bar {
+    .bar-s {
       background: $txtDefult !important;
     }
   }
