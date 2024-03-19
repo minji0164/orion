@@ -752,10 +752,10 @@ legend {
   .hd-sub1 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  .material-symbols-outlined {
+  .hd-sub1 .material-symbols-outlined {
     color: #212126 !important;
   }
-  .bar {
+  .hd-sub1 .bar {
     background: #212126 !important;
   }
 }
