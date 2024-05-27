@@ -278,6 +278,8 @@ legend {
   min-height: 100vh;
   max-width: 430px;
   margin: 0 auto;
+  overflow-x: hidden; /* 가로 스크롤 감춤 */
+  overflow-y: auto; /* 세로 스크롤 허용 */
 }
 .wrap ::-moz-selection {
   background-color: #E30512;
@@ -759,6 +761,11 @@ legend {
     background: #212126 !important;
   }
 }
+.sec-essence,
+.sec-biz {
+  background: #fff;
+}
+
 .inner {
   margin: 0 20px;
 }

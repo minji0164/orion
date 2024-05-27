@@ -13,6 +13,8 @@
   min-height: 100vh;
   max-width: 430px;
   margin: 0 auto;
+  overflow-x: hidden; /* 가로 스크롤 감춤 */
+  overflow-y: auto; /* 세로 스크롤 허용 */
 
   ::selection {
     background-color: $primary; // 선택한 텍스트의 배경색을 빨간색으로 설정
@@ -603,6 +605,11 @@
       background: $txtDefult !important;
     }
   }
+}
+
+.sec-essence,
+.sec-biz {
+  background: #fff;
 }
 
 // footer
